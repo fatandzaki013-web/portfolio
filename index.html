@@ -1,0 +1,2281 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fatan Dzaki Fayyadh — Pelajar TKJ &amp; Aspiring Full-Stack Developer</title>
+  <meta name="description" content="Portofolio resmi Fatan Dzaki Fayyadh — Pelajar SMKS Al-Hadiid jurusan Teknik Komputer &amp; Jaringan yang antusias belajar pembuatan website modern dan berproses menuju Full-Stack Developer." />
+  
+  <!-- Google Fonts: Caveat (for Polaroids), Playfair Display, Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Leaflet CSS & JS for Fadza Fashion Interactive Courier Tracking -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+            handwriting: ['"Caveat"', '"Segoe Print"', 'cursive', 'sans-serif'],
+          },
+          colors: {
+            obsidian: {
+              DEFAULT: '#09090b',
+              surface: '#111015',
+              elevated: '#181620',
+              border: 'rgba(255, 255, 255, 0.08)'
+            },
+            brand: {
+              blue: '#2563eb',
+              sky: '#38bdf8',
+              cyan: '#06b6d4',
+              orange: '#ea580c',
+              amber: '#f59e0b',
+              warm: '#f97316'
+            },
+            burnt: {
+              glow: '#082f49',
+              dark: '#1e3a8a',
+              DEFAULT: '#2563eb',
+              light: '#38bdf8',
+              amber: '#f59e0b',
+              orange: '#ea580c'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --bg-obsidian: #09090b;
+      --card-surface: #111015;
+      --accent-blue: #2563eb;
+      --accent-sky: #38bdf8;
+      --accent-orange: #ea580c;
+      --accent-amber: #f59e0b;
+      --burnt-orange: #f97316;
+      --burnt-deep: #2563eb;
+      --burnt-glow: #082f49;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 96px;
+      overflow-x: hidden !important;
+      max-width: 100vw;
+      width: 100%;
+    }
+
+    body {
+      background-color: var(--bg-obsidian);
+      color: #f4f4f5;
+      overflow-x: hidden !important;
+      max-width: 100vw;
+      width: 100%;
+      position: relative;
+      font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    }
+
+    /* Ambient Dual-Tone Hero Radial Spotlight (Cyber Blue + Warm Burnt Orange Harmony) */
+    .hero-spotlight {
+      background: 
+        radial-gradient(circle at 22% 48%, rgba(37, 99, 235, 0.40) 0%, rgba(15, 23, 42, 0.65) 35%, rgba(9, 9, 11, 1) 75%),
+        radial-gradient(circle at 78% 28%, rgba(234, 88, 12, 0.16) 0%, rgba(9, 9, 11, 0) 55%);
+    }
+
+    /* Glass Surface */
+    .glass-surface {
+      background: rgba(20, 15, 13, 0.75);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .glass-surface:hover {
+      border-color: rgba(56, 189, 248, 0.45);
+      transform: translateY(-3px);
+      box-shadow: 0 16px 36px -12px rgba(37, 99, 235, 0.25);
+    }
+
+    /* Seamless Portrait Mask: Fades out bottom cleanly to dark obsidian */
+    .hero-portrait-seamless {
+      -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 98%);
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 98%);
+    }
+
+    /* Giant Outline Watermark Typography for Footer - Elegan, Pas & Tidak Mencolok */
+    .footer-watermark-text {
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.22);
+      text-stroke: 1px rgba(255, 255, 255, 0.22);
+      letter-spacing: -0.03em;
+      transition: all 0.3s ease;
+    }
+    .footer-watermark-text:hover {
+      -webkit-text-stroke: 1.2px rgba(255, 255, 255, 0.38);
+      text-stroke: 1.2px rgba(255, 255, 255, 0.38);
+    }
+
+    /* Footer Harmonious Dual-Tone Gradient Glow */
+    .footer-orange-gradient {
+      background: radial-gradient(circle at 50% 100%, rgba(234, 88, 12, 0.18) 0%, rgba(37, 99, 235, 0.12) 35%, rgba(9, 9, 11, 1) 80%);
+    }
+
+    /* Footer Architectural Blueprint Grid Texture & Ambience */
+    .footer-blueprint-grid {
+      background-image: 
+        radial-gradient(circle at 50% 100%, rgba(37, 99, 235, 0.14) 0%, rgba(234, 88, 12, 0.08) 40%, rgba(9, 9, 11, 0) 70%),
+        repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.02) 0, rgba(255, 255, 255, 0.02) 1px, transparent 0, transparent 24px);
+    }
+
+    /* Leaflet Container Dark */
+    .leaflet-container {
+      background: #09090b !important;
+      font-family: inherit;
+    }
+    .leaflet-bar a {
+      background-color: #17120f !important;
+      color: #f4f4f5 !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+    .leaflet-bar a:hover {
+      background-color: #2563eb !important;
+      color: #fff !important;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #09090b;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #27272a;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #2563eb;
+    }
+  </style>
+</head>
+<body class="font-sans antialiased selection:bg-burnt-light selection:text-white relative">
+
+  <!-- ================= 1. FLOATING CAPSULE NAVBAR (PRESISI & ELEGAN DENGAN SCROLL SPY RESPONSIF) ================= -->
+  <header class="fixed top-3 sm:top-5 left-0 right-0 w-full z-50 flex justify-center px-2 sm:px-4 pointer-events-none transition-all duration-300" id="main-nav">
+    <nav class="pointer-events-auto flex items-center gap-1 sm:gap-1.5 p-1 sm:p-2 rounded-full bg-zinc-950/90 border border-white/10 backdrop-blur-xl shadow-[0_12px_40px_rgba(0,0,0,0.7)] ring-1 ring-white/5 transition-all" aria-label="Main Navigation">
+      
+      <!-- Home -->
+      <a href="#home" id="nav-home" class="nav-capsule-item active px-3 sm:px-5 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-sm font-semibold text-white bg-gradient-to-r from-blue-600 via-sky-500 to-blue-500 shadow-[0_0_20px_rgba(37,99,235,0.45)] border border-sky-400/50 transition-all duration-300 flex items-center justify-center">
+        Home
+      </a>
+
+      <!-- About -->
+      <a href="#about" id="nav-about" class="nav-capsule-item px-3 sm:px-5 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-sm font-medium text-zinc-400 hover:text-white hover:bg-white/5 border border-transparent transition-all duration-300 flex items-center justify-center">
+        About
+      </a>
+
+      <!-- Works (Selected Projects, Credentials & Community) -->
+      <a href="#projects" id="nav-portfolio" class="nav-capsule-item px-3 sm:px-5 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-sm font-medium text-zinc-400 hover:text-white hover:bg-white/5 border border-transparent transition-all duration-300 flex items-center justify-center">
+        Works
+      </a>
+
+      <!-- Contact -->
+      <a href="#contact" id="nav-contact" class="nav-capsule-item px-3 sm:px-5 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-sm font-medium text-zinc-400 hover:text-white hover:bg-white/5 border border-transparent transition-all duration-300 flex items-center justify-center">
+        Contact
+      </a>
+
+      <!-- Vertical Divider -->
+      <div class="h-4 sm:h-5 w-[1px] bg-white/15 mx-0.5 sm:mx-1"></div>
+
+      <!-- Audio / Sound Toggle Button -->
+      <button 
+        id="sound-toggle-btn" 
+        onclick="togglePortfolioSound()" 
+        class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/5 hover:bg-white/15 border border-white/10 text-zinc-300 hover:text-white flex items-center justify-center transition-all duration-300 active:scale-95 cursor-pointer" 
+        title="Aktifkan / Matikan Efek Suara Interaktif"
+        aria-label="Toggle Sound Effects"
+      >
+        <i data-lucide="volume-x" id="sound-icon" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-zinc-300"></i>
+      </button>
+
+    </nav>
+  </header>
+
+  <main>
+    <!-- ================= 2. HERO SECTION (FOTO MENYATU ALAMI DENGAN GLOW SPOTLIGHT) ================= -->
+    <section id="home" class="relative min-h-screen hero-spotlight flex items-center pt-24 sm:pt-28 pb-12 sm:pb-16 px-4 sm:px-6 overflow-hidden">
+      
+      <!-- Ambient Dual-Tone Spotlights: Dipusatkan Mengikuti Posisi Foto Lebih ke Tengah -->
+      <div class="absolute left-1/4 sm:left-[22%] lg:left-[22%] top-1/2 -translate-y-1/2 w-[260px] h-[260px] sm:w-[480px] sm:h-[480px] lg:w-[650px] lg:h-[650px] rounded-full bg-blue-600/30 blur-[100px] sm:blur-[140px] pointer-events-none opacity-90"></div>
+      <div class="absolute left-1/4 sm:left-[26%] lg:left-[27%] top-1/2 -translate-y-1/2 w-[220px] h-[220px] sm:w-[360px] sm:h-[360px] lg:w-[480px] lg:h-[480px] rounded-full bg-orange-600/25 blur-[90px] sm:blur-[115px] pointer-events-none"></div>
+
+      <div class="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center relative z-10">
+        
+        <!-- KOLOM KIRI: Foto Profil Transparan (Diposisikan Lebih ke Tengah Sesuai Permintaan User) -->
+        <div class="lg:col-span-5 xl:col-span-5 flex justify-center lg:justify-center order-2 lg:order-1 relative lg:translate-x-4 xl:translate-x-8">
+          
+          <div class="relative w-[280px] sm:w-[390px] lg:w-[460px] flex justify-center items-end">
+            
+            <!-- Ambient Spotlight Glow di Belakang Subjek -->
+            <div class="absolute -inset-8 bg-gradient-to-t from-burnt-glow/70 via-burnt-deep/30 to-transparent blur-3xl rounded-full pointer-events-none opacity-90"></div>
+            
+            <!-- Foto Profil Transparan: Posisi lebih proporsional di tengah stage visual -->
+            <img 
+              src="profile-fatan-transparent.png" 
+              alt="Fatan Dzaki Fayyadh — Web Developer & Security Enthusiast" 
+              onerror="this.onerror=null; this.src='profile-fatan-spotlight.jpg';"
+              class="relative z-10 w-full h-auto max-h-[580px] object-cover object-top filter brightness-95 contrast-105 select-none pointer-events-none hero-portrait-seamless drop-shadow-[0_25px_50px_rgba(37,99,235,0.35)]"
+            />
+          </div>
+        </div>
+
+        <!-- KOLOM KANAN: Tipografi Rata Kanan di Desktop, Tertata Rapi di Mobile -->
+        <div class="lg:col-span-7 xl:col-span-7 flex flex-col items-center lg:items-end text-center lg:text-right order-1 lg:order-2 w-full max-w-full px-1 sm:px-0">
+          
+          <!-- Pill Badge: Dual-Tone Status Belajar & Siswa SMK -->
+          <div class="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-zinc-900/90 border border-white/10 mb-5 sm:mb-6 shadow-sm">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-orange-400"></span>
+            </span>
+            <span class="text-[10px] sm:text-[11px] font-semibold tracking-[0.16em] sm:tracking-[0.2em] uppercase text-zinc-300 font-mono">SMK Student &bull; Continuous Learner</span>
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
+          </div>
+
+          <!-- Heading Utama Serif Besar: Responsive Text Scaled for Clean Mobile View -->
+          <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight text-white leading-[1.1] sm:leading-[1.08] mb-4 sm:mb-5">
+            Hi, I'm <span class="italic font-normal text-orange-400">Fatan.</span>
+          </h1>
+
+          <!-- Sub-headline Huruf Kapital Tracking Lebar -->
+          <p class="text-[11px] sm:text-sm font-semibold uppercase tracking-[0.18em] sm:tracking-[0.28em] text-zinc-400 mb-5 sm:mb-6 font-mono">
+            PELAJAR TKJ &bull; ASPIRING FULL-STACK DEVELOPER
+          </p>
+
+          <!-- Deskripsi Singkat & Padat Sesuai Kondisi Realistis Siswa Belajar -->
+          <p class="text-zinc-300/95 text-sm sm:text-lg max-w-xl leading-relaxed mb-8 sm:mb-10 font-normal px-2 sm:px-0">
+            Halo! Saya Fatan, pelajar SMKS Al-Hadiid yang antusias mendalami dunia pembuatan website dan jaringan komputer. Sedang giat belajar teknologi web dari frontend hingga backend dengan impian menjadi Full-Stack Developer.
+          </p>
+
+          <!-- 2 Tombol CTA: Responsif Full-Width di Mobile, Rata Kanan di Desktop -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-end gap-3 sm:gap-4 w-full max-w-xs sm:max-w-none">
+            <a href="#projects" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-3 sm:py-3.5 rounded-full bg-gradient-to-r from-blue-600 via-sky-600 to-blue-500 hover:from-blue-500 hover:to-sky-400 text-white font-semibold text-sm shadow-xl shadow-blue-500/30 hover:shadow-blue-500/50 transition-all transform hover:-translate-y-0.5 active:translate-y-0">
+              <span>Explore Works</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+            
+            <a href="#contact" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-zinc-900/90 hover:bg-zinc-800 text-zinc-200 border border-white/10 font-semibold text-sm transition-all hover:border-orange-400/50 hover:text-orange-300">
+              <i data-lucide="mail" class="w-4 h-4 text-zinc-400"></i>
+              <span>Contact Me</span>
+            </a>
+          </div>
+
+          <!-- Ribbon Metrik Baru: Sesuai Pembelajaran & Jurusan TKJ (Tampilan Kolom Pas Tanpa Wrapping Teks) -->
+          <div class="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-white/10 grid grid-cols-3 gap-2 sm:gap-8 text-center lg:text-right w-full max-w-xl">
+            <div class="group">
+              <p class="font-sans text-xl sm:text-2xl lg:text-3xl font-extrabold text-white tracking-tight group-hover:text-blue-400 transition-colors">Full-Stack</p>
+              <p class="text-[9px] sm:text-[11px] text-zinc-400 uppercase tracking-wider font-mono mt-1">Aspirasi &amp; Target</p>
+            </div>
+            <div class="group">
+              <p class="font-sans text-xl sm:text-2xl lg:text-3xl font-extrabold text-orange-400 tracking-tight group-hover:text-amber-300 transition-colors">Web Dev</p>
+              <p class="text-[9px] sm:text-[11px] text-zinc-400 uppercase tracking-wider font-mono mt-1">Pembuatan Website</p>
+            </div>
+            <div class="group">
+              <p class="font-sans text-xl sm:text-2xl lg:text-3xl font-extrabold text-sky-400 tracking-tight group-hover:text-cyan-300 transition-colors">Network</p>
+              <p class="text-[9px] sm:text-[11px] text-zinc-400 uppercase tracking-wider font-mono mt-1">TKJ Fundamentals</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 3. ABOUT SECTION (SESUAI GAMBAR REFERENSI IDENTITAS FATAN) ================= -->
+    <section id="about" class="py-16 sm:py-24 px-4 sm:px-6 max-w-7xl mx-auto relative overflow-hidden">
+      
+      <!-- Ambient Stardust Glows -->
+      <div class="absolute right-[5%] top-10 w-96 h-96 rounded-full bg-cyan-500/5 blur-[120px] pointer-events-none"></div>
+      <div class="absolute left-[5%] bottom-10 w-80 h-80 rounded-full bg-burnt-glow/15 blur-[100px] pointer-events-none"></div>
+
+      <!-- Section Header Sesuai Referensi -->
+      <div class="mb-10 sm:mb-14 border-b border-white/10 pb-5 sm:pb-6 flex flex-col sm:flex-row sm:items-end justify-between gap-3 sm:gap-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-[0.25em] text-orange-400 font-mono block mb-2">// 01. PROFIL &amp; IDENTITAS</span>
+          <h2 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight font-sans">
+            About Me
+          </h2>
+        </div>
+        <p class="text-xs font-mono text-zinc-500">
+          SMKS Al-Hadiid &bull; Teknik Komputer &amp; Jaringan
+        </p>
+      </div>
+
+      <!-- MAIN IDENTITY SHOWCASE (DESAIN MODERN ELEGAN TANPA FOTO SESUAI INSTRUKSI) -->
+      <div class="rounded-2xl sm:rounded-3xl p-5 sm:p-12 lg:p-14 bg-zinc-950/75 border border-white/10 shadow-2xl backdrop-blur-xl relative overflow-hidden mb-14 sm:mb-20 group hover:border-burnt-light/30 transition-all duration-300">
+        <!-- Ambient Background Glows -->
+        <div class="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-burnt-glow/15 blur-[100px] pointer-events-none"></div>
+        <div class="absolute -left-20 -bottom-20 w-80 h-80 rounded-full bg-cyan-500/10 blur-[100px] pointer-events-none"></div>
+        
+        <!-- Subtle Tech Watermark in background -->
+        <div class="absolute right-8 bottom-6 select-none pointer-events-none opacity-5 font-mono text-8xl font-black text-white hidden md:block">
+          &lt;/DEV&gt;
+        </div>
+
+        <!-- Terminal Header Bar -->
+        <div class="flex flex-wrap items-center justify-between gap-4 mb-8 pb-5 border-b border-white/10 relative z-10">
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
+            <span class="w-3 h-3 rounded-full bg-blue-500/80"></span>
+            <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+            <span class="text-xs font-mono text-zinc-400 ml-2">fatan.dev / identity</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-semibold text-orange-400 bg-orange-500/10 border border-orange-500/25">
+              <span class="w-1.5 h-1.5 rounded-full bg-orange-400 animate-pulse"></span>
+              Web Learner
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-medium text-sky-400 bg-sky-500/10 border border-sky-500/25">
+              Aspiring Full-Stack
+            </span>
+          </div>
+        </div>
+
+        <!-- Keterangan Identitas Fatan (Disesuaikan dengan Minat Pembuatan Web & Full-Stack) -->
+        <div class="space-y-6 relative z-10 max-w-4xl">
+          <p class="text-zinc-100 text-lg sm:text-xl lg:text-2xl font-normal leading-relaxed">
+            Saya adalah <strong class="text-orange-400 font-extrabold">Pelajar &amp; Web Developer Pemula</strong> yang memiliki ketertarikan tinggi pada proses pembuatan website. Saya senang mempelajari bagaimana sebuah web dibangun dari baris kode, menghubungkan tampilan interaktif dengan logika data, dan bersemangat untuk berkembang menjadi seorang <strong class="text-sky-400 font-extrabold">Full-Stack Developer</strong>.
+          </p>
+
+          <p class="text-zinc-300 text-base sm:text-lg lg:text-xl font-normal leading-relaxed">
+            Saat ini saya aktif mempelajari dasar-dasar HTML, CSS, JavaScript, framework modern, serta fondasi backend dan database untuk menghasilkan karya website yang fungsional dan rapi.
+          </p>
+
+          <!-- Core Capability Highlights Pills: Minat Pembuatan Web & Full-Stack -->
+          <div class="pt-2 flex flex-wrap gap-2.5">
+            <span class="px-3.5 py-1.5 rounded-xl bg-white/[0.04] border border-white/10 text-xs sm:text-sm font-mono text-zinc-300 flex items-center gap-2">
+              <span class="text-orange-400">⚡</span> Pembuatan Website
+            </span>
+            <span class="px-3.5 py-1.5 rounded-xl bg-white/[0.04] border border-white/10 text-xs sm:text-sm font-mono text-zinc-300 flex items-center gap-2">
+              <span class="text-sky-400">🚀</span> Aspiring Full-Stack Developer
+            </span>
+            <span class="px-3.5 py-1.5 rounded-xl bg-white/[0.04] border border-white/10 text-xs sm:text-sm font-mono text-zinc-300 flex items-center gap-2">
+              <span class="text-amber-400">🗄️</span> Backend &amp; Database Dasar
+            </span>
+            <span class="px-3.5 py-1.5 rounded-xl bg-white/[0.04] border border-white/10 text-xs sm:text-sm font-mono text-zinc-300 flex items-center gap-2">
+              <span class="text-blue-400">🌐</span> Siswa Jurusan TKJ
+            </span>
+          </div>
+
+          <!-- Tombol Aksi Sesuai Referensi: Responsif Mobile -->
+          <div class="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 w-full sm:w-auto">
+            <a 
+              href="#projects" 
+              class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl bg-blue-950/40 hover:bg-blue-900/60 border border-blue-500/40 hover:border-blue-400 text-blue-400 hover:text-white font-mono text-sm font-semibold transition-all duration-300 shadow-lg shadow-blue-500/10 hover:shadow-blue-500/25 active:scale-95 group"
+            >
+              <span class="text-blue-400 font-bold font-mono">&lt;/&gt;</span>
+              <span>Lihat Projek</span>
+              <i data-lucide="arrow-up-right" class="w-4 h-4 text-blue-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform stroke-[2.5]"></i>
+            </a>
+
+            <a 
+              href="#contact" 
+              class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-6 py-3 sm:py-3.5 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-zinc-300 hover:text-white border border-white/10 font-semibold text-sm transition-all duration-300 active:scale-95"
+            >
+              <i data-lucide="mail" class="w-4 h-4 text-zinc-400"></i>
+              <span>Hubungi Saya</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ================= EDUCATION & DREAM UNIVERSITY (PERSIS GAMBAR REFERENSI USER) ================= -->
+      <div class="mb-20">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+          
+          <!-- KOLOM KIRI: EDUCATION • (WARM AMBER / ORANGE ACCENT) -->
+          <div>
+            <div class="flex items-center gap-2 mb-6">
+              <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+                Education
+              </h3>
+              <span class="w-2 h-2 rounded-full bg-orange-400"></span>
+            </div>
+
+            <div class="space-y-4">
+              <!-- Card 1: SMKS Al-Hadiid -->
+              <div class="rounded-2xl p-4 sm:p-5 bg-zinc-950/75 border border-white/10 hover:border-orange-500/40 transition-all duration-300 shadow-xl flex items-center gap-4 sm:gap-5 group">
+                <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-white p-2 flex items-center justify-center flex-shrink-0 shadow-md group-hover:scale-105 transition-transform duration-300">
+                  <img src="assets/education/logo-smks-alhadiid.png" alt="Logo SMKS Al-Hadiid" class="w-full h-full object-contain mx-auto my-auto block select-none" />
+                </div>
+                <div class="min-w-0 flex-1">
+                  <h4 class="font-bold text-white text-base sm:text-lg leading-tight truncate group-hover:text-orange-400 transition-colors">
+                    SMKS Al-Hadiid
+                  </h4>
+                  <p class="text-xs sm:text-sm text-zinc-400 mt-1 leading-snug">
+                    Sekolah Menengah Kejuruan (Teknik Komputer &amp; Jaringan)
+                  </p>
+                  <p class="text-xs sm:text-sm font-mono font-medium text-orange-400 mt-1.5 flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-orange-400 animate-pulse"></span>
+                    2025 — Sekarang
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card 2: SMPS Al-Hadiid -->
+              <div class="rounded-2xl p-4 sm:p-5 bg-zinc-950/75 border border-white/10 hover:border-blue-400/40 transition-all duration-300 shadow-xl flex items-center gap-4 sm:gap-5 group">
+                <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-white p-2 flex items-center justify-center flex-shrink-0 shadow-md group-hover:scale-105 transition-transform duration-300">
+                  <img src="assets/education/logo-smps-alhadiid.png" alt="Logo SMPS Al-Hadiid" class="w-full h-full object-contain mx-auto my-auto block select-none" />
+                </div>
+                <div class="min-w-0 flex-1">
+                  <h4 class="font-bold text-white text-base sm:text-lg leading-tight truncate group-hover:text-blue-400 transition-colors">
+                    SMPS Al-Hadiid
+                  </h4>
+                  <p class="text-xs sm:text-sm text-zinc-400 mt-1 leading-snug">
+                    Sekolah Menengah Pertama
+                  </p>
+                  <p class="text-xs sm:text-sm font-mono font-medium text-zinc-400 mt-1.5 flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-zinc-500"></span>
+                    2022 — 2025
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- KOLOM KANAN: DREAM UNIVERSITY • (ELECTRIC SKY & BLUE ACCENTS) -->
+          <div>
+            <div class="flex items-center gap-2 mb-6">
+              <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+                Dream University
+              </h3>
+              <span class="w-2 h-2 rounded-full bg-sky-400"></span>
+            </div>
+
+            <div class="space-y-4">
+              <!-- Card 1: IDN -->
+              <div class="rounded-2xl p-4 sm:p-5 bg-zinc-950/75 border border-white/10 hover:border-sky-500/40 transition-all duration-300 shadow-xl flex items-center gap-4 sm:gap-5 group">
+                <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-white p-2 flex items-center justify-center flex-shrink-0 shadow-md group-hover:scale-105 transition-transform duration-300">
+                  <img src="assets/education/logo-idn.png" alt="Logo IDN" class="w-full h-full object-contain mx-auto my-auto block select-none" />
+                </div>
+                <div class="min-w-0 flex-1">
+                  <h4 class="font-bold text-white text-base sm:text-lg leading-tight truncate group-hover:text-sky-400 transition-colors">
+                    Politeknik IDN
+                  </h4>
+                  <p class="text-xs sm:text-sm text-zinc-400 mt-1 leading-snug">
+                    Target Kampus IT &amp; Rekayasa Perangkat Lunak
+                  </p>
+                  <p class="text-xs sm:text-sm font-mono font-medium text-sky-400 mt-1.5 flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
+                    Universitas Impian &bull; Software Engineering
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card 2: ITB -->
+              <div class="rounded-2xl p-4 sm:p-5 bg-zinc-950/75 border border-white/10 hover:border-blue-500/40 transition-all duration-300 shadow-xl flex items-center gap-4 sm:gap-5 group">
+                <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-white p-2 flex items-center justify-center flex-shrink-0 shadow-md group-hover:scale-105 transition-transform duration-300">
+                  <img src="assets/education/logo-itb.png" alt="Logo ITB" class="w-full h-full object-contain mx-auto my-auto block select-none" />
+                </div>
+                <div class="min-w-0 flex-1">
+                  <h4 class="font-bold text-white text-base sm:text-lg leading-tight truncate group-hover:text-blue-400 transition-colors">
+                    Institut Teknologi Bandung (ITB)
+                  </h4>
+                  <p class="text-xs sm:text-sm text-zinc-400 mt-1 leading-snug">
+                    Sekolah Teknik Elektro &amp; Informatika (STEI)
+                  </p>
+                  <p class="text-xs sm:text-sm font-mono font-medium text-blue-400 mt-1.5 flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
+                    Universitas Impian &bull; Computer Science &amp; Security
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 3 CORE DISCIPLINE PILLARS (DESAIN LEBIH BAGUS, MODERN SANS-SERIF & TECH PILLS) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-16">
+        
+        <!-- Pillar 1: Pembuatan Website Dasar & Frontend (Warm Amber/Orange Theme) -->
+        <div class="rounded-3xl p-7 sm:p-8 bg-zinc-950/85 border border-white/10 hover:border-orange-500/50 hover:shadow-[0_20px_45px_-15px_rgba(234,88,12,0.25)] transition-all duration-300 shadow-xl backdrop-blur-xl relative overflow-hidden flex flex-col justify-between group hover:-translate-y-1">
+          <!-- Ambient Glow Corner -->
+          <div class="absolute -right-12 -top-12 w-44 h-44 rounded-full bg-orange-600/15 blur-3xl pointer-events-none group-hover:bg-orange-600/25 transition-all duration-500"></div>
+
+          <div>
+            <!-- Top Header: Icon & Category Tag -->
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-14 h-14 rounded-2xl bg-orange-500/15 border border-orange-500/30 flex items-center justify-center text-orange-400 shadow-lg shadow-orange-500/10 group-hover:scale-110 transition-transform duration-300">
+                <i data-lucide="layout" class="w-7 h-7"></i>
+              </div>
+              <span class="px-3 py-1 rounded-full text-[11px] font-mono font-semibold bg-orange-500/10 text-orange-400 border border-orange-500/25 flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-orange-400 animate-pulse"></span>
+                Frontend Basics
+              </span>
+            </div>
+
+            <!-- Title: Modern Sans-Serif Plus Jakarta Sans -->
+            <h4 class="font-sans text-xl sm:text-2xl font-extrabold text-white tracking-tight group-hover:text-orange-400 transition-colors mb-3">
+              Pembuatan Website
+            </h4>
+
+            <!-- Description -->
+            <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+              Fokus mendalam pada penyusunan arsitektur web yang rapi, antarmuka responsif di ponsel dan desktop, serta interaktivitas modern dengan animasi halus.
+            </p>
+          </div>
+
+          <!-- Bottom: Tech / Skill Tags -->
+          <div class="pt-5 border-t border-white/10 mt-2">
+            <p class="text-[10px] font-mono uppercase text-zinc-500 tracking-wider mb-2.5">Fokus Praktik &amp; Tools</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 rounded-lg bg-white/[0.04] border border-white/10 text-xs font-mono text-zinc-300 group-hover:border-orange-500/30 transition-colors">HTML5</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white/[0.04] border border-white/10 text-xs font-mono text-zinc-300 group-hover:border-orange-500/30 transition-colors">CSS3 &amp; Tailwind</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white/[0.04] border border-white/10 text-xs font-mono text-zinc-300 group-hover:border-orange-500/30 transition-colors">JavaScript</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white/[0.04] border border-white/10 text-xs font-mono text-zinc-300 group-hover:border-orange-500/30 transition-colors">Responsive UI</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar 2: Backend & Database (Electric Blue Theme) -->
+        <div class="rounded-3xl p-7 sm:p-8 bg-zinc-950/85 border border-white/10 hover:border-blue-500/50 hover:shadow-[0_20px_45px_-15px_rgba(37,99,235,0.25)] transition-all duration-300 shadow-xl backdrop-blur-xl relative overflow-hidden flex flex-col justify-between group hover:-translate-y-1">
+          <!-- Ambient Glow Corner -->
+          <div class="absolute -right-12 -top-12 w-44 h-44 rounded-full bg-blue-600/15 blur-3xl pointer-events-none group-hover:bg-blue-600/25 transition-all duration-500"></div>
+
+          <div>
+            <!-- Top Header: Icon & Category Tag -->
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-14 h-14 rounded-2xl bg-blue-500/15 border border-blue-500/30 flex items-center justify-center text-blue-400 shadow-lg shadow-blue-500/10 group-hover:scale-110 transition-transform duration-300">
+                <i data-lucide="database" class="w-7 h-7"></i>
+              </div>
+              <span class="px-3 py-1 rounded-full text-[11px] font-mono font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/25 flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse"></span>
+                Aspiring Fullstack
+              </span>
+            </div>
+
+            <!-- Title: Modern Sans-Serif Plus Jakarta Sans -->
+            <h4 class="font-sans text-xl sm:text-2xl font-extrabold text-white tracking-tight group-hover:text-blue-400 transition-colors mb-3">
+              Backend &amp; Database
+            </h4>
+
+            <!-- Description -->
+            <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+              Mempelajari pemrosesan server-side, relasi basis data terstruktur, alur CRUD data aman, serta persiapan matang menuju jenjang Full-Stack Developer.
+            </p>
+          </div>
+
+          <!-- Bottom: Tech / Skill Tags -->
+          <div class="pt-5 border-t border-white/10 mt-2">
+            <p class="text-[10px] font-mono uppercase text-zinc-500 tracking-wider mb-2.5">Fokus Praktik &amp; Tools</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 rounded-lg bg-white/[0.04] border border-white/10 text-xs font-mono text-zinc-300 group-hover:border-blue-500/30 transition-colors">PHP &amp; Node.js</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white/[0.04] border border-white/10 text-xs font-mono text-zinc-300 group-hover:border-blue-500/30 transition-colors">MySQL</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white/[0.04] border border-white/10 text-xs font-mono text-zinc-300 group-hover:border-blue-500/30 transition-colors">REST API</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white/[0.04] border border-white/10 text-xs font-mono text-zinc-300 group-hover:border-blue-500/30 transition-colors">CRUD Logic</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar 3: Network & TKJ Lab (Sky / Cyan Theme) -->
+        <div class="rounded-3xl p-7 sm:p-8 bg-zinc-950/85 border border-white/10 hover:border-sky-500/50 hover:shadow-[0_20px_45px_-15px_rgba(56,189,248,0.25)] transition-all duration-300 shadow-xl backdrop-blur-xl relative overflow-hidden flex flex-col justify-between group hover:-translate-y-1">
+          <!-- Ambient Glow Corner -->
+          <div class="absolute -right-12 -top-12 w-44 h-44 rounded-full bg-sky-600/15 blur-3xl pointer-events-none group-hover:bg-sky-600/25 transition-all duration-500"></div>
+
+          <div>
+            <!-- Top Header: Icon & Category Tag -->
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-14 h-14 rounded-2xl bg-sky-500/15 border border-sky-500/30 flex items-center justify-center text-sky-400 shadow-lg shadow-sky-500/10 group-hover:scale-110 transition-transform duration-300">
+                <i data-lucide="server" class="w-7 h-7"></i>
+              </div>
+              <span class="px-3 py-1 rounded-full text-[11px] font-mono font-semibold bg-sky-500/10 text-sky-400 border border-sky-500/25 flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse"></span>
+                Infrastructure &amp; LAN
+              </span>
+            </div>
+
+            <!-- Title: Modern Sans-Serif Plus Jakarta Sans -->
+            <h4 class="font-sans text-xl sm:text-2xl font-extrabold text-white tracking-tight group-hover:text-sky-400 transition-colors mb-3">
+              Network &amp; TKJ Lab
+            </h4>
+
+            <!-- Description -->
+            <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+              Praktik kejuruan langsung di SMKS Al-Hadiid: perakitan fisik PC, crimping kabel LAN UTP, konfigurasi router MikroTik, dan pemahaman segmentasi jaringan.
+            </p>
+          </div>
+
+          <!-- Bottom: Tech / Skill Tags -->
+          <div class="pt-5 border-t border-white/10 mt-2">
+            <p class="text-[10px] font-mono uppercase text-zinc-500 tracking-wider mb-2.5">Fokus Praktik &amp; Tools</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 rounded-lg bg-white/[0.04] border border-white/10 text-xs font-mono text-zinc-300 group-hover:border-sky-500/30 transition-colors">MikroTik RouterOS</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white/[0.04] border border-white/10 text-xs font-mono text-zinc-300 group-hover:border-sky-500/30 transition-colors">Kabel LAN UTP</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white/[0.04] border border-white/10 text-xs font-mono text-zinc-300 group-hover:border-sky-500/30 transition-colors">IPv4 Subnet</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white/[0.04] border border-white/10 text-xs font-mono text-zinc-300 group-hover:border-sky-500/30 transition-colors">Hardware PC</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+            <!-- ================= 4. PORTFOLIO SHOWCASE (SESUAI GAMBAR REFERENSI USER) ================= -->
+    <section id="projects" class="py-16 sm:py-24 px-4 sm:px-6 max-w-7xl mx-auto relative overflow-hidden">
+      
+      <!-- Ambient Glows -->
+      <div class="absolute -right-10 sm:right-[10%] top-10 w-64 h-64 sm:w-96 sm:h-96 rounded-full bg-burnt-glow/15 blur-[90px] sm:blur-[130px] pointer-events-none"></div>
+      <div class="absolute -left-10 sm:left-[10%] bottom-10 w-64 h-64 sm:w-96 sm:h-96 rounded-full bg-blue-600/10 blur-[90px] sm:blur-[130px] pointer-events-none"></div>
+
+      <!-- 2. SECTION HEADER & TAB SWITCHER (DUAL-TONE ACCENT & POLISHED DESIGN) -->
+      <div class="text-center mb-8 sm:mb-12 relative z-10">
+        <span class="text-xs font-bold uppercase tracking-[0.25em] text-sky-400 font-mono block mb-2">// 02. SHOWCASE &amp; PORTOFOLIO</span>
+        <h2 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight font-sans mb-6 sm:mb-8">
+          Selected Works
+        </h2>
+
+        <!-- Tab Buttons Pill Bar: Pas 1 Baris di Layar HP Tanpa Menumpuk -->
+        <div class="flex items-center justify-center gap-1 sm:gap-3 p-1 sm:p-1.5 max-w-2xl mx-auto rounded-full bg-zinc-950/80 border border-white/10 backdrop-blur-xl shadow-xl">
+          <button 
+            onclick="switchPortfolioTab('projects')" 
+            id="tab-btn-projects" 
+            class="portfolio-tab-btn active px-3 sm:px-5 py-1.5 sm:py-2.5 rounded-full text-[11px] sm:text-sm font-semibold bg-gradient-to-r from-blue-600 via-sky-600 to-blue-500 text-white shadow-lg shadow-blue-500/35 border border-sky-400/50 transition-all flex items-center gap-1 sm:gap-2 cursor-pointer whitespace-nowrap"
+          >
+            <span class="font-mono font-bold">&lt;/&gt;</span>
+            <span>Projects</span>
+          </button>
+          
+          <button 
+            onclick="switchPortfolioTab('credentials')" 
+            id="tab-btn-credentials" 
+            class="portfolio-tab-btn px-3 sm:px-5 py-1.5 sm:py-2.5 rounded-full text-[11px] sm:text-sm font-medium text-zinc-400 hover:text-white transition-all flex items-center gap-1 sm:gap-2 cursor-pointer whitespace-nowrap"
+          >
+            <i data-lucide="award" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+            <span class="sm:hidden">Credentials</span>
+            <span class="hidden sm:inline">Certificates &amp; Achievements</span>
+          </button>
+
+          <button 
+            onclick="switchPortfolioTab('techstack')" 
+            id="tab-btn-techstack" 
+            class="portfolio-tab-btn px-3 sm:px-5 py-1.5 sm:py-2.5 rounded-full text-[11px] sm:text-sm font-medium text-zinc-400 hover:text-white transition-all flex items-center gap-1 sm:gap-2 cursor-pointer whitespace-nowrap"
+          >
+            <i data-lucide="cpu" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+            <span>Tech Stack</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ================= VIEW 1: PROJECTS GRID (PROJEK ASLI FATAN DZAKI DENGAN TAMPILAN RAPI 3-KOLOM) ================= -->
+      <div id="portfolio-view-projects" class="portfolio-view relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          
+          <!-- PROJEK 1: DAPUR RASA (WARM AMBER / CULINARY ORANGE THEME) -->
+          <div class="rounded-3xl p-5 sm:p-6 bg-zinc-950/85 border border-white/10 hover:border-orange-500/50 hover:shadow-[0_20px_40px_-15px_rgba(234,88,12,0.25)] transition-all duration-300 shadow-2xl backdrop-blur-xl relative overflow-hidden flex flex-col justify-between group">
+            <div>
+              <div 
+                class="rounded-2xl overflow-hidden aspect-[16/10] bg-black/60 border border-white/10 mb-5 relative group-hover:border-orange-400/50 transition-colors cursor-pointer" 
+                onclick="openLightbox('assets/projects/project-dapur-rasa-opt.jpg', 'Dapur Rasa — Katalog Kuliner', 'Platform website pemesanan &amp; katalog makanan rumahan')"
+                title="Klik untuk melihat preview penuh"
+              >
+                <img 
+                  src="assets/projects/project-dapur-rasa-card.jpg" 
+                  alt="Dapur Rasa" 
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                  decoding="async"
+                />
+              </div>
+
+              <div class="flex items-center justify-between gap-2 mb-2">
+                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-semibold bg-orange-500/10 text-orange-400 border border-orange-500/25">
+                  Kuliner &bull; Catalog
+                </span>
+                <span class="text-[10px] font-mono text-zinc-500">Web App</span>
+              </div>
+
+              <h3 class="text-xl sm:text-2xl font-bold text-white group-hover:text-orange-400 transition-colors mb-3">
+                Dapur Rasa
+              </h3>
+
+              <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                Platform website katalog kuliner modern untuk memantau menu hidangan, harga, dan proses pemesanan makanan secara efisien.
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+              <button 
+                type="button" 
+                onclick="openLightbox('assets/projects/project-dapur-rasa-opt.jpg', 'Dapur Rasa — Katalog Kuliner', 'Platform website pemesanan &amp; katalog makanan rumahan')" 
+                class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-orange-500/10 hover:bg-orange-500/20 border border-orange-500/25 hover:border-orange-400/50 text-xs font-mono text-orange-300 hover:text-white transition"
+              >
+                <span>Details</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+              <span class="text-[11px] font-mono text-orange-400/90 font-medium">Katalog Kuliner</span>
+            </div>
+          </div>
+
+          <!-- PROJEK 2: FADZA FASHION (ROYAL BLUE THEME) -->
+          <div class="rounded-3xl p-5 sm:p-6 bg-zinc-950/85 border border-white/10 hover:border-blue-500/50 hover:shadow-[0_20px_40px_-15px_rgba(37,99,235,0.25)] transition-all duration-300 shadow-2xl backdrop-blur-xl relative overflow-hidden flex flex-col justify-between group">
+            <div>
+              <div 
+                class="rounded-2xl overflow-hidden aspect-[16/10] bg-black/60 border border-white/10 mb-5 relative group-hover:border-blue-400/50 transition-colors cursor-pointer" 
+                onclick="openLightbox('assets/projects/project-fadza-fashion-opt.jpg', 'Fadza Fashion — Toko Busana', 'Antarmuka e-commerce busana &amp; aksesori modern dengan pelacakan kurir')"
+                title="Klik untuk melihat preview penuh"
+              >
+                <img 
+                  src="assets/projects/project-fadza-fashion-card.jpg" 
+                  alt="Fadza Fashion" 
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                  decoding="async"
+                />
+              </div>
+
+              <div class="flex items-center justify-between gap-2 mb-2">
+                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/25">
+                  E-Commerce &bull; Streetwear
+                </span>
+                <span class="text-[10px] font-mono text-zinc-500">Web App</span>
+              </div>
+
+              <h3 class="text-xl sm:text-2xl font-bold text-white group-hover:text-blue-400 transition-colors mb-3">
+                Fadza Fashion
+              </h3>
+
+              <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                Aplikasi antarmuka e-commerce toko busana modern untuk menampilkan katalog produk pakaian, keranjang belanja dinamis, dan pelacakan kurir.
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+              <button 
+                type="button" 
+                onclick="openLightbox('assets/projects/project-fadza-fashion-opt.jpg', 'Fadza Fashion — Toko Busana', 'Antarmuka e-commerce busana &amp; aksesori modern dengan pelacakan kurir')" 
+                class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-500/10 hover:bg-blue-500/20 border border-blue-500/25 hover:border-blue-400/50 text-xs font-mono text-blue-300 hover:text-white transition"
+              >
+                <span>Details</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+              <span class="text-[11px] font-mono text-blue-400/90 font-medium">E-Commerce UI</span>
+            </div>
+          </div>
+
+          <!-- PROJEK 3: FADZA TRIP (SKY BLUE / TOURISM THEME) -->
+          <div class="rounded-3xl p-5 sm:p-6 bg-zinc-950/85 border border-white/10 hover:border-sky-500/50 hover:shadow-[0_20px_40px_-15px_rgba(56,189,248,0.25)] transition-all duration-300 shadow-2xl backdrop-blur-xl relative overflow-hidden flex flex-col justify-between group">
+            <div>
+              <div 
+                class="rounded-2xl overflow-hidden aspect-[16/10] bg-black/60 border border-white/10 mb-5 relative group-hover:border-sky-400/50 transition-colors cursor-pointer" 
+                onclick="openLightbox('assets/projects/project-fadza-trip-opt.jpg', 'Fadza Trip — Portal Wisata', 'Website pameran destinasi wisata nusantara &amp; open-trip adventure')"
+                title="Klik untuk melihat preview penuh"
+              >
+                <img 
+                  src="assets/projects/project-fadza-trip-card.jpg" 
+                  alt="Fadza Trip" 
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                  decoding="async"
+                />
+              </div>
+
+              <div class="flex items-center justify-between gap-2 mb-2">
+                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-semibold bg-sky-500/10 text-sky-400 border border-sky-500/25">
+                  Tourism &bull; Travel
+                </span>
+                <span class="text-[10px] font-mono text-zinc-500">Web App</span>
+              </div>
+
+              <h3 class="text-xl sm:text-2xl font-bold text-white group-hover:text-sky-400 transition-colors mb-3">
+                Fadza Trip
+              </h3>
+
+              <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                Platform website destinasi wisata dan perjalanan nusantara untuk memamerkan keindahan alam, paket tur wisata, dan galeri visual perjalanan.
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+              <button 
+                type="button" 
+                onclick="openLightbox('assets/projects/project-fadza-trip-opt.jpg', 'Fadza Trip — Portal Wisata', 'Website pameran destinasi wisata nusantara &amp; open-trip adventure')" 
+                class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-sky-500/10 hover:bg-sky-500/20 border border-sky-500/25 hover:border-sky-400/50 text-xs font-mono text-sky-300 hover:text-white transition"
+              >
+                <span>Details</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+              <span class="text-[11px] font-mono text-sky-400/90 font-medium">Tourism UI</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ================= VIEW 2: CERTIFICATES & ACHIEVEMENTS (GABUNGAN SESUAI PERMINTAAN USER) ================= -->
+      <div id="portfolio-view-credentials" class="portfolio-view hidden relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
+          
+          <!-- CARD A: REAL CERTIFICATE (SEMINAR HUMAN ERROR VS CYBER THREAT) -->
+          <div class="rounded-3xl p-6 sm:p-7 bg-zinc-950/85 border border-white/10 hover:border-blue-500/40 transition-all duration-300 shadow-2xl backdrop-blur-xl flex flex-col justify-between group">
+            <div>
+              <!-- Real Certificate Image Preview with Click to Zoom -->
+              <div class="rounded-2xl overflow-hidden aspect-[16/11] bg-white/5 border border-white/15 mb-5 relative group/cert cursor-pointer shadow-xl" onclick="openCertModal()" title="Klik untuk memperbesar sertifikat">
+                <img 
+                  src="assets/certificates/sertifikat-seminar-mnc.jpg" 
+                  alt="Sertifikat Seminar Human Error vs Cyber Threat — Fatan Dzaki Fayyadh" 
+                  class="w-full h-full object-cover group-hover/cert:scale-[1.03] transition-transform duration-500" 
+                  loading="lazy"
+                />
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover/cert:opacity-100 transition-opacity flex items-center justify-center text-white">
+                  <span class="px-3.5 py-1.5 rounded-full bg-black/80 backdrop-blur-md text-xs font-mono flex items-center gap-2 border border-white/20 shadow-lg">
+                    <i data-lucide="maximize-2" class="w-3.5 h-3.5 text-blue-400"></i>
+                    <span>Buka Ukuran Penuh</span>
+                  </span>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between gap-2 mb-2">
+                <span class="px-2.5 py-1 rounded-full text-[11px] font-mono font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/25 flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
+                  Sertifikat Partisipasi
+                </span>
+                <span class="text-[11px] font-mono text-zinc-400">14 Nov 2026</span>
+              </div>
+
+              <h3 class="text-xl sm:text-2xl font-bold text-white group-hover:text-blue-400 transition-colors mt-2 mb-2">
+                Human Error vs Cyber Threat
+              </h3>
+
+              <p class="text-zinc-400 text-xs sm:text-sm leading-relaxed mb-4">
+                Diberikan kepada <strong class="text-white">Fatan Dzaki Fayyadh</strong> atas partisipasinya dalam Seminar Nasional: Membangun 'Human Firewall' untuk Mencegah Kebocoran Data dan Phishing Modern.
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-zinc-400">
+              <span class="text-zinc-300 font-medium">Anon Cyber Team × MNC University</span>
+              <span class="text-blue-400 font-semibold" title="ID Verifikasi: 893c7cae-9f74-4325-b1bc-3cde219f571f">ID: 893c7cae...</span>
+            </div>
+          </div>
+
+          <!-- CARD B: PENCAPAIAN & MILESTONE (WARM AMBER / ORANGE ACCENT) -->
+          <div class="rounded-3xl p-6 sm:p-7 bg-zinc-950/85 border border-white/10 hover:border-orange-500/40 transition-all duration-300 shadow-2xl backdrop-blur-xl flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-5">
+                <div class="w-12 h-12 rounded-2xl bg-orange-500/10 border border-orange-500/25 text-orange-400 flex items-center justify-center shadow-lg shadow-orange-500/10 group-hover:scale-105 transition-transform">
+                  <i data-lucide="trophy" class="w-6 h-6"></i>
+                </div>
+                <span class="px-3 py-1 rounded-full text-[11px] font-mono font-semibold bg-orange-500/10 text-orange-400 border border-orange-500/25 flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-orange-400 animate-pulse"></span>
+                  Milestone &amp; Rekognisi
+                </span>
+              </div>
+
+              <h3 class="text-xl sm:text-2xl font-bold text-white group-hover:text-orange-400 transition-colors mb-2">
+                Pencapaian &amp; Rekognisi
+              </h3>
+
+              <p class="text-zinc-400 text-xs sm:text-sm leading-relaxed mb-6">
+                Dokumentasi rekognisi kejuaraan, partisipasi aktif seminar teknologi informasi nasional (NCC 2026 Jakarta &amp; MNC University), serta pengembangan portofolio proyek web dan praktikum jaringan mandiri menuju impian Full-Stack Developer.
+              </p>
+
+              <div class="space-y-3 pt-2">
+                <div class="p-3.5 rounded-xl bg-white/5 border border-white/10 flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center flex-shrink-0">
+                    <i data-lucide="shield-check" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs font-semibold text-white">Delegasi Peserta Seminar IT</p>
+                    <p class="text-[11px] text-zinc-400 font-mono">MNC University &amp; NCC 2026</p>
+                  </div>
+                </div>
+
+                <div class="p-3.5 rounded-xl bg-white/5 border border-white/10 flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center flex-shrink-0">
+                    <i data-lucide="laptop" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs font-semibold text-white">Praktikum Mandiri Jaringan TKJ</p>
+                    <p class="text-[11px] text-zinc-400 font-mono">Konfigurasi MikroTik &amp; Lab Jaringan</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono text-zinc-400 mt-6">
+              <span>Rekognisi &amp; Pembelajaran</span>
+              <span class="text-blue-400 font-semibold">Tahun 2026</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ================= VIEW 4: TECH STACK VIEW (15 TEKNOLOGI PERSIS GAMBAR REFERENSI USER) ================= -->
+      <div id="portfolio-view-techstack" class="portfolio-view hidden relative z-10">
+        <div class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-5">
+          <!-- React -->
+          <div class="rounded-2xl p-4 sm:p-5 bg-zinc-950/80 border border-white/10 hover:border-burnt-light/50 transition-all duration-300 shadow-xl hover:-translate-y-1.5 group flex flex-col items-center justify-center text-center aspect-square cursor-default">
+            <div class="w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <img src="assets/tech/react.svg" alt="React" class="w-10 h-10 object-contain filter drop-shadow" />
+            </div>
+            <span class="text-xs sm:text-sm font-semibold text-white mt-3 group-hover:text-burnt-light transition-colors">
+              React
+            </span>
+          </div>
+          <!-- JavaScript -->
+          <div class="rounded-2xl p-4 sm:p-5 bg-zinc-950/80 border border-white/10 hover:border-burnt-light/50 transition-all duration-300 shadow-xl hover:-translate-y-1.5 group flex flex-col items-center justify-center text-center aspect-square cursor-default">
+            <div class="w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <img src="assets/tech/javascript.svg" alt="JavaScript" class="w-10 h-10 object-contain filter drop-shadow" />
+            </div>
+            <span class="text-xs sm:text-sm font-semibold text-white mt-3 group-hover:text-burnt-light transition-colors">
+              JavaScript
+            </span>
+          </div>
+          <!-- HTML5 -->
+          <div class="rounded-2xl p-4 sm:p-5 bg-zinc-950/80 border border-white/10 hover:border-burnt-light/50 transition-all duration-300 shadow-xl hover:-translate-y-1.5 group flex flex-col items-center justify-center text-center aspect-square cursor-default">
+            <div class="w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <img src="assets/tech/html5.svg" alt="HTML5" class="w-10 h-10 object-contain filter drop-shadow" />
+            </div>
+            <span class="text-xs sm:text-sm font-semibold text-white mt-3 group-hover:text-burnt-light transition-colors">
+              HTML5
+            </span>
+          </div>
+          <!-- CSS3 -->
+          <div class="rounded-2xl p-4 sm:p-5 bg-zinc-950/80 border border-white/10 hover:border-burnt-light/50 transition-all duration-300 shadow-xl hover:-translate-y-1.5 group flex flex-col items-center justify-center text-center aspect-square cursor-default">
+            <div class="w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <img src="assets/tech/css3.svg" alt="CSS3" class="w-10 h-10 object-contain filter drop-shadow" />
+            </div>
+            <span class="text-xs sm:text-sm font-semibold text-white mt-3 group-hover:text-burnt-light transition-colors">
+              CSS3
+            </span>
+          </div>
+          <!-- Font Awesome -->
+          <div class="rounded-2xl p-4 sm:p-5 bg-zinc-950/80 border border-white/10 hover:border-burnt-light/50 transition-all duration-300 shadow-xl hover:-translate-y-1.5 group flex flex-col items-center justify-center text-center aspect-square cursor-default">
+            <div class="w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <img src="assets/tech/fontawesome.svg" alt="Font Awesome" class="w-10 h-10 object-contain filter drop-shadow" />
+            </div>
+            <span class="text-xs sm:text-sm font-semibold text-white mt-3 group-hover:text-burnt-light transition-colors">
+              Font Awesome
+            </span>
+          </div>
+          <!-- Python -->
+          <div class="rounded-2xl p-4 sm:p-5 bg-zinc-950/80 border border-white/10 hover:border-burnt-light/50 transition-all duration-300 shadow-xl hover:-translate-y-1.5 group flex flex-col items-center justify-center text-center aspect-square cursor-default">
+            <div class="w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <img src="assets/tech/python.svg" alt="Python" class="w-10 h-10 object-contain filter drop-shadow" />
+            </div>
+            <span class="text-xs sm:text-sm font-semibold text-white mt-3 group-hover:text-burnt-light transition-colors">
+              Python
+            </span>
+          </div>
+          <!-- PHP -->
+          <div class="rounded-2xl p-4 sm:p-5 bg-zinc-950/80 border border-white/10 hover:border-burnt-light/50 transition-all duration-300 shadow-xl hover:-translate-y-1.5 group flex flex-col items-center justify-center text-center aspect-square cursor-default">
+            <div class="w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <img src="assets/tech/php.svg" alt="PHP" class="w-10 h-10 object-contain filter drop-shadow" />
+            </div>
+            <span class="text-xs sm:text-sm font-semibold text-white mt-3 group-hover:text-burnt-light transition-colors">
+              PHP
+            </span>
+          </div>
+          <!-- MySQL -->
+          <div class="rounded-2xl p-4 sm:p-5 bg-zinc-950/80 border border-white/10 hover:border-burnt-light/50 transition-all duration-300 shadow-xl hover:-translate-y-1.5 group flex flex-col items-center justify-center text-center aspect-square cursor-default">
+            <div class="w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <img src="assets/tech/mysql.svg" alt="MySQL" class="w-10 h-10 object-contain filter drop-shadow" />
+            </div>
+            <span class="text-xs sm:text-sm font-semibold text-white mt-3 group-hover:text-burnt-light transition-colors">
+              MySQL
+            </span>
+          </div>
+          <!-- Supabase -->
+          <div class="rounded-2xl p-4 sm:p-5 bg-zinc-950/80 border border-white/10 hover:border-burnt-light/50 transition-all duration-300 shadow-xl hover:-translate-y-1.5 group flex flex-col items-center justify-center text-center aspect-square cursor-default">
+            <div class="w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <img src="assets/tech/supabase.svg" alt="Supabase" class="w-10 h-10 object-contain filter drop-shadow" />
+            </div>
+            <span class="text-xs sm:text-sm font-semibold text-white mt-3 group-hover:text-burnt-light transition-colors">
+              Supabase
+            </span>
+          </div>
+          <!-- Firebase -->
+          <div class="rounded-2xl p-4 sm:p-5 bg-zinc-950/80 border border-white/10 hover:border-burnt-light/50 transition-all duration-300 shadow-xl hover:-translate-y-1.5 group flex flex-col items-center justify-center text-center aspect-square cursor-default">
+            <div class="w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <img src="assets/tech/firebase.svg" alt="Firebase" class="w-10 h-10 object-contain filter drop-shadow" />
+            </div>
+            <span class="text-xs sm:text-sm font-semibold text-white mt-3 group-hover:text-burnt-light transition-colors">
+              Firebase
+            </span>
+          </div>
+          <!-- XAMPP -->
+          <div class="rounded-2xl p-4 sm:p-5 bg-zinc-950/80 border border-white/10 hover:border-burnt-light/50 transition-all duration-300 shadow-xl hover:-translate-y-1.5 group flex flex-col items-center justify-center text-center aspect-square cursor-default">
+            <div class="w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <img src="assets/tech/xampp.svg" alt="XAMPP" class="w-10 h-10 object-contain filter drop-shadow" />
+            </div>
+            <span class="text-xs sm:text-sm font-semibold text-white mt-3 group-hover:text-burnt-light transition-colors">
+              XAMPP
+            </span>
+          </div>
+          <!-- Git -->
+          <div class="rounded-2xl p-4 sm:p-5 bg-zinc-950/80 border border-white/10 hover:border-burnt-light/50 transition-all duration-300 shadow-xl hover:-translate-y-1.5 group flex flex-col items-center justify-center text-center aspect-square cursor-default">
+            <div class="w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <img src="assets/tech/git.svg" alt="Git" class="w-10 h-10 object-contain filter drop-shadow" />
+            </div>
+            <span class="text-xs sm:text-sm font-semibold text-white mt-3 group-hover:text-burnt-light transition-colors">
+              Git
+            </span>
+          </div>
+          <!-- GitHub -->
+          <div class="rounded-2xl p-4 sm:p-5 bg-zinc-950/80 border border-white/10 hover:border-burnt-light/50 transition-all duration-300 shadow-xl hover:-translate-y-1.5 group flex flex-col items-center justify-center text-center aspect-square cursor-default">
+            <div class="w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <img src="assets/tech/github.svg" alt="GitHub" class="w-10 h-10 object-contain filter drop-shadow" />
+            </div>
+            <span class="text-xs sm:text-sm font-semibold text-white mt-3 group-hover:text-burnt-light transition-colors">
+              GitHub
+            </span>
+          </div>
+          <!-- Vite -->
+          <div class="rounded-2xl p-4 sm:p-5 bg-zinc-950/80 border border-white/10 hover:border-burnt-light/50 transition-all duration-300 shadow-xl hover:-translate-y-1.5 group flex flex-col items-center justify-center text-center aspect-square cursor-default">
+            <div class="w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <img src="assets/tech/vite.svg" alt="Vite" class="w-10 h-10 object-contain filter drop-shadow" />
+            </div>
+            <span class="text-xs sm:text-sm font-semibold text-white mt-3 group-hover:text-burnt-light transition-colors">
+              Vite
+            </span>
+          </div>
+          <!-- Vercel -->
+          <div class="rounded-2xl p-4 sm:p-5 bg-zinc-950/80 border border-white/10 hover:border-burnt-light/50 transition-all duration-300 shadow-xl hover:-translate-y-1.5 group flex flex-col items-center justify-center text-center aspect-square cursor-default">
+            <div class="w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <img src="assets/tech/vercel.svg" alt="Vercel" class="w-10 h-10 object-contain filter drop-shadow" />
+            </div>
+            <span class="text-xs sm:text-sm font-semibold text-white mt-3 group-hover:text-burnt-light transition-colors">
+              Vercel
+            </span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ================= 4. COMMUNITY & ACTIVITIES (POLAROID GALLERY) ================= -->
+    <section id="community" class="py-16 sm:py-24 px-4 sm:px-6 max-w-7xl mx-auto relative overflow-hidden">
+      
+      <!-- Ambient Glows -->
+      <div class="absolute -right-10 sm:right-[10%] top-1/4 w-64 h-64 sm:w-96 sm:h-96 rounded-full bg-cyan-500/10 blur-[90px] sm:blur-[140px] pointer-events-none"></div>
+      <div class="absolute -left-10 sm:left-[10%] bottom-1/4 w-64 h-64 sm:w-96 sm:h-96 rounded-full bg-burnt-glow/20 blur-[90px] sm:blur-[130px] pointer-events-none"></div>
+
+      <!-- Section Header -->
+      <div class="mb-14 border-b border-white/10 pb-6 flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs font-bold uppercase tracking-[0.25em] text-orange-400 font-mono">// 03. KOMUNITAS &amp; HIGHLIGHTS</span>
+          </div>
+          <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight font-sans">
+            Komunitas &amp; Kegiatan
+          </h2>
+          <p class="text-zinc-400 text-sm sm:text-base mt-2 max-w-2xl">
+            Highlight dokumentasi koding bareng teman, seminar teknologi, dan dokumentasi lab praktikum.
+          </p>
+        </div>
+        <div class="hidden md:flex items-center gap-2 text-xs font-mono text-zinc-500">
+          <i data-lucide="camera" class="w-4 h-4 text-burnt-light"></i>
+          <span>Polaroid Snapshots</span>
+        </div>
+      </div>
+
+      <!-- Polaroid Snapshot Gallery (Alternating Order & Click-to-Open Modal) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 items-center justify-items-center max-w-6xl mx-auto pt-6 pb-6">
+        
+        <!-- POLAROID 1: MEETING (KLIK UNTUK MEMBUKA) -->
+        <div onclick="openCommunityLightbox(0)" class="group relative bg-[#fafafa] text-zinc-900 rounded-sm p-3.5 pb-7 shadow-[0_15px_35px_rgba(0,0,0,0.65)] -rotate-2 hover:rotate-0 hover:scale-105 hover:z-30 transition-all duration-300 w-full max-w-[275px] border border-white/60 cursor-pointer select-none">
+          <!-- Photo Frame -->
+          <div class="aspect-square w-full overflow-hidden bg-zinc-900 rounded-[2px] mb-3 relative">
+            <img src="assets/community/community-coding-circle.jpg" alt="Meeting" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <div class="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+              <span class="px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-[11px] font-mono flex items-center gap-1.5 border border-white/20">
+                <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i>
+                <span>Buka Foto</span>
+              </span>
+            </div>
+          </div>
+          <!-- Polaroid Handwritten Chin -->
+          <div class="flex items-baseline justify-between px-1">
+            <span class="font-handwriting text-2xl font-bold text-zinc-900 tracking-tight leading-none">Meeting</span>
+            <span class="font-handwriting text-lg text-zinc-600 font-semibold italic whitespace-nowrap ml-2">with the crew</span>
+          </div>
+        </div>
+
+        <!-- POLAROID 2: HUMAN ERROR VS THREAT (KLIK UNTUK MEMBUKA) -->
+        <div onclick="openCommunityLightbox(1)" class="group relative bg-[#fafafa] text-zinc-900 rounded-sm p-3.5 pb-7 shadow-[0_15px_35px_rgba(0,0,0,0.65)] rotate-2 hover:rotate-0 hover:scale-105 hover:z-30 transition-all duration-300 w-full max-w-[275px] border border-white/60 cursor-pointer select-none">
+          <!-- Photo Frame -->
+          <div class="aspect-square w-full overflow-hidden bg-zinc-900 rounded-[2px] mb-3 relative">
+            <img src="assets/community/community-seminar-stage.jpg" alt="Seminar Human Error vs Cyber Threat" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <div class="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+              <span class="px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-[11px] font-mono flex items-center gap-1.5 border border-white/20">
+                <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i>
+                <span>Buka Foto</span>
+              </span>
+            </div>
+          </div>
+          <!-- Polaroid Handwritten Chin -->
+          <div class="flex items-baseline justify-between px-1">
+            <span class="font-handwriting text-xl font-bold text-zinc-900 tracking-tight leading-none">Human Error vs Threat</span>
+            <span class="font-handwriting text-lg text-zinc-600 font-semibold italic whitespace-nowrap ml-2">MNC Univ</span>
+          </div>
+        </div>
+
+        <!-- POLAROID 3: WORKSPACE (DISELING POSISI KE-3 SESUAI PERMINTAAN USER) -->
+        <div onclick="openCommunityLightbox(2)" class="group relative bg-[#fafafa] text-zinc-900 rounded-sm p-3.5 pb-7 shadow-[0_15px_35px_rgba(0,0,0,0.65)] -rotate-1 hover:rotate-0 hover:scale-105 hover:z-30 transition-all duration-300 w-full max-w-[275px] border border-white/60 cursor-pointer select-none">
+          <!-- Photo Frame -->
+          <div class="aspect-square w-full overflow-hidden bg-zinc-900 rounded-[2px] mb-3 relative">
+            <img src="assets/community/community-workspace.jpg" alt="Workspace Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <div class="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+              <span class="px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-[11px] font-mono flex items-center gap-1.5 border border-white/20">
+                <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i>
+                <span>Buka Foto</span>
+              </span>
+            </div>
+          </div>
+          <!-- Polaroid Handwritten Chin -->
+          <div class="flex items-baseline justify-between px-1">
+            <span class="font-handwriting text-2xl font-bold text-zinc-900 tracking-tight leading-none">Workspace</span>
+            <span class="font-handwriting text-lg text-zinc-600 font-semibold italic whitespace-nowrap ml-2">daily setup</span>
+          </div>
+        </div>
+
+        <!-- POLAROID 4: NATIONAL GATHERING (DISELING POSISI TERAKHIR) -->
+        <div onclick="openCommunityLightbox(3)" class="group relative bg-[#fafafa] text-zinc-900 rounded-sm p-3.5 pb-7 shadow-[0_15px_35px_rgba(0,0,0,0.65)] rotate-3 hover:rotate-0 hover:scale-105 hover:z-30 transition-all duration-300 w-full max-w-[275px] border border-white/60 cursor-pointer select-none">
+          <!-- Photo Frame -->
+          <div class="aspect-square w-full overflow-hidden bg-zinc-900 rounded-[2px] mb-3 relative">
+            <img src="assets/community/community-seminar-auditorium.jpg" alt="National Tech Gathering" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <div class="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+              <span class="px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-[11px] font-mono flex items-center gap-1.5 border border-white/20">
+                <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i>
+                <span>Buka Foto</span>
+              </span>
+            </div>
+          </div>
+          <!-- Polaroid Handwritten Chin -->
+          <div class="flex items-baseline justify-between px-1">
+            <span class="font-handwriting text-2xl font-bold text-zinc-900 tracking-tight leading-none">National Gathering</span>
+            <span class="font-handwriting text-lg text-zinc-600 font-semibold italic whitespace-nowrap ml-2">Auditorium</span>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ================= COMMUNITY POLAROID LIGHTBOX MODAL ================= -->
+    <div id="community-lightbox" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 sm:p-6 bg-black/90 backdrop-blur-md transition-all duration-300">
+      
+      <!-- Backdrop click close -->
+      <div class="absolute inset-0" onclick="closeCommunityLightbox()"></div>
+
+      <!-- Modal Content Container -->
+      <div class="relative z-10 max-w-lg w-full flex flex-col items-center">
+        
+        <!-- Top Action Bar (Close button & counter) -->
+        <div class="w-full flex items-center justify-between mb-3 text-white">
+          <span id="lightbox-counter" class="text-xs font-mono text-zinc-400">1 / 4 Moments</span>
+          <button onclick="closeCommunityLightbox()" class="px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-xs font-mono text-white transition flex items-center gap-1.5 cursor-pointer">
+            <span>Tutup</span>
+            <i data-lucide="x" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <!-- Polaroid Card in Lightbox -->
+        <div class="relative bg-[#fafafa] text-zinc-900 rounded-sm p-4 sm:p-5 pb-8 sm:pb-9 shadow-[0_25px_60px_rgba(0,0,0,0.9)] w-full border border-white/80 animate-in fade-in zoom-in-95 duration-200">
+          
+          <!-- Big Image Frame -->
+          <div class="aspect-square w-full overflow-hidden bg-zinc-950 rounded-[2px] mb-4 relative">
+            <img id="community-lightbox-img" src="" alt="Community Moment" class="w-full h-full object-cover transition-all duration-300" />
+          </div>
+
+          <!-- Handwritten Chin -->
+          <div class="flex items-baseline justify-between px-2">
+            <span id="community-lightbox-title" class="font-handwriting text-3xl sm:text-4xl font-bold text-zinc-900 tracking-tight leading-none"></span>
+            <span id="lightbox-tag" class="font-handwriting text-xl sm:text-2xl text-zinc-600 font-semibold italic whitespace-nowrap ml-3"></span>
+          </div>
+        </div>
+
+        <!-- Navigation Controls (Prev / Next) -->
+        <div class="flex items-center justify-center gap-4 mt-5">
+          <button onclick="navigateLightbox(-1)" class="w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white flex items-center justify-center transition hover:scale-105 cursor-pointer shadow-lg" title="Foto Sebelumnya">
+            <i data-lucide="chevron-left" class="w-5 h-5"></i>
+          </button>
+          <span class="text-xs font-mono text-zinc-400">Navigasi [← / →]</span>
+          <button onclick="navigateLightbox(1)" class="w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white flex items-center justify-center transition hover:scale-105 cursor-pointer shadow-lg" title="Foto Selanjutnya">
+            <i data-lucide="chevron-right" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ================= 5. SPOTIFY / DAILY ROTATION SECTION (SESUAI REFERENSI GAMBAR) ================= -->
+    <section id="music" class="py-14 sm:py-20 px-4 sm:px-6 max-w-7xl mx-auto relative overflow-hidden">
+      
+      <!-- Subtle Ambient Glows -->
+      <div class="absolute -left-10 top-1/2 -translate-y-1/2 w-64 h-64 sm:w-96 sm:h-96 rounded-full bg-blue-600/10 blur-[90px] sm:blur-[140px] pointer-events-none"></div>
+      <div class="absolute -right-10 top-1/2 -translate-y-1/2 w-64 h-64 sm:w-96 sm:h-96 rounded-full bg-cyan-500/10 blur-[90px] sm:blur-[140px] pointer-events-none"></div>
+
+      <!-- Main Outer Container Card: Responsive Padding -->
+      <div class="relative rounded-2xl sm:rounded-[36px] p-6 sm:p-12 lg:p-16 bg-gradient-to-br from-zinc-950/90 via-zinc-900/50 to-zinc-950/90 border border-white/10 backdrop-blur-2xl shadow-[0_25px_60px_-15px_rgba(0,0,0,0.8)] overflow-hidden group">
+        
+        <!-- Subtle Inner Highlight & Mesh -->
+        <div class="absolute -top-32 -left-32 w-80 h-80 rounded-full bg-blue-500/15 blur-[100px] pointer-events-none"></div>
+        <div class="absolute -bottom-32 -right-32 w-80 h-80 rounded-full bg-cyan-400/10 blur-[100px] pointer-events-none"></div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center relative z-10">
+          
+          <!-- LEFT COLUMN: Headline, Text & Spotify Button -->
+          <div class="lg:col-span-6 flex flex-col justify-center">
+            
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/25 text-blue-400 text-xs font-mono mb-4 sm:mb-6 w-fit">
+              <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+              <span>// 04. DAILY ROTATION</span>
+            </div>
+
+            <h2 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1] font-sans">
+              A little music.<br/>
+              <span class="text-sky-400">
+                A lot of ideas.
+              </span>
+            </h2>
+
+            <p class="text-zinc-400 text-sm sm:text-base leading-relaxed mt-4 sm:mt-5 max-w-lg">
+              Musik yang menemani proses saya mengubah ide menjadi sesuatu yang nyata. Intip playlist yang sedang sering saya putar.
+            </p>
+
+            <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+              <a href="https://open.spotify.com/playlist/3K5EyeOwyaexCLlxhPhbG9?si=JhZbovC3SpaMWdTKC-jRIQ" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-2xl bg-blue-600/15 hover:bg-blue-600/25 border border-blue-500/30 hover:border-blue-400/60 text-blue-300 hover:text-white font-medium text-sm transition-all duration-300 shadow-lg shadow-blue-950/40 hover:-translate-y-0.5 group/btn">
+                <svg class="w-4 h-4 text-blue-400 group-hover/btn:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.496 17.306c-.217.356-.677.469-1.033.252-2.828-1.728-6.388-2.119-10.582-1.161-.407.093-.815-.162-.908-.57-.093-.408.163-.816.57-.909 4.593-1.05 8.528-.602 11.701 1.345.356.218.47.677.252 1.043zm1.467-3.262c-.273.444-.855.586-1.299.313-3.238-1.99-8.174-2.566-12.004-1.403-.497.151-1.026-.135-1.177-.633-.151-.497.135-1.025.633-1.177 4.382-1.33 9.814-.689 13.534 1.601.444.273.586.855.313 1.299zm.125-3.398c-3.882-2.305-10.287-2.518-13.992-1.393-.596.181-1.228-.157-1.41-.753-.181-.595.158-1.228.754-1.41 4.258-1.294 11.33-1.041 15.808 1.616.536.318.711 1.018.393 1.554-.318.536-1.018.711-1.553.386z"/>
+                </svg>
+                <span>Daily Rotation di Spotify</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4 text-blue-400 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform"></i>
+              </a>
+
+              <div class="flex items-center justify-center sm:justify-start gap-2 text-xs font-mono text-zinc-500">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>14 Tracks • Curated by fadza</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- RIGHT COLUMN: Spotify Player Card -->
+          <div class="lg:col-span-6 w-full">
+            <div class="relative w-full max-w-lg mx-auto lg:max-w-none">
+              
+              <!-- Glow behind player -->
+              <div class="absolute -inset-1 rounded-[26px] bg-gradient-to-r from-blue-500/20 via-sky-500/10 to-cyan-500/20 blur-xl opacity-75 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+
+              <!-- Real Interactive Spotify Embed Player -->
+              <div class="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-[#121212]">
+                <iframe 
+                  style="border-radius:16px;" 
+                  src="https://open.spotify.com/embed/playlist/3K5EyeOwyaexCLlxhPhbG9?utm_source=generator&theme=0" 
+                  width="100%" 
+                  height="360" 
+                  frameBorder="0" 
+                  allowfullscreen="" 
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                  loading="lazy"
+                  class="w-full bg-[#121212] block">
+                </iframe>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ================= 6. CONTACT SECTION ================= -->
+    <section id="contact" class="py-16 sm:py-24 px-4 sm:px-6 max-w-6xl mx-auto">
+      
+      <div class="glass-surface rounded-2xl sm:rounded-3xl p-6 sm:p-12 lg:p-16 relative overflow-hidden border border-burnt-light/25 shadow-2xl">
+        <div class="absolute -right-10 sm:-right-24 -bottom-10 sm:-bottom-24 w-64 h-64 sm:w-96 sm:h-96 rounded-full bg-burnt-glow blur-[90px] sm:blur-[120px] pointer-events-none opacity-80"></div>
+        <div class="absolute -left-20 -top-20 w-80 h-80 rounded-full bg-burnt-dark/20 blur-[100px] pointer-events-none"></div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start relative z-10">
+          
+          <div class="lg:col-span-5 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-[0.25em] font-mono text-orange-400">// 05. GET IN TOUCH</span>
+              <!-- Modern Tech Sans Heading -->
+              <h2 class="font-sans text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mt-2 mb-4 leading-tight tracking-tight">
+                Let's Build Something Impactful.
+              </h2>
+              <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-6">
+                Terbuka untuk konsultasi pembuatan web application, toko online e-commerce, maupun kolaborasi proyek web &amp; jaringan komputer.
+              </p>
+            </div>
+
+            <div class="space-y-3.5 pt-5 border-t border-white/10">
+              <!-- WhatsApp Card -->
+              <a href="https://wa.me/6285888159765" target="_blank" rel="noopener noreferrer" class="p-3 sm:p-3.5 rounded-2xl bg-zinc-950/70 border border-white/10 hover:border-emerald-500/50 flex items-center gap-3.5 transition group shadow-sm">
+                <div class="w-10 h-10 rounded-xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400 group-hover:scale-105 transition">
+                  <i data-lucide="phone" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <p class="text-[10px] text-zinc-400 font-mono uppercase tracking-wider">WhatsApp Direct</p>
+                  <p class="font-semibold text-white group-hover:text-emerald-400 transition text-sm">+62 858-8815-9765</p>
+                </div>
+              </a>
+
+              <!-- Email Card -->
+              <a href="mailto:fatandzaki013@gmail.com" class="p-3 sm:p-3.5 rounded-2xl bg-zinc-950/70 border border-white/10 hover:border-sky-500/50 flex items-center gap-3.5 transition group shadow-sm">
+                <div class="w-10 h-10 rounded-xl bg-sky-500/15 border border-sky-500/30 flex items-center justify-center text-sky-400 group-hover:scale-105 transition">
+                  <i data-lucide="mail" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <p class="text-[10px] text-zinc-400 font-mono uppercase tracking-wider">Email Address</p>
+                  <p class="font-semibold text-white group-hover:text-sky-400 transition text-sm">fatandzaki013@gmail.com</p>
+                </div>
+              </a>
+
+              <!-- Social Media Buttons with Pure Inline SVGs (100% Reliable Render) -->
+              <div class="pt-3">
+                <p class="text-xs font-mono uppercase text-zinc-400 mb-2.5 tracking-wider">Connect Online</p>
+                <div class="grid grid-cols-3 gap-2 sm:gap-2.5">
+                  
+                  <!-- GitHub Button with Official SVG -->
+                  <a 
+                    href="https://github.com/fatandzaki013-web" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    class="px-2 sm:px-3 py-2.5 rounded-xl bg-zinc-950/80 border border-white/10 hover:border-sky-400/50 text-[11px] sm:text-xs font-mono text-zinc-300 hover:text-white transition-all shadow-sm flex items-center justify-center gap-1.5 sm:gap-2 group text-center" 
+                    title="GitHub: fatandzaki013-web"
+                  >
+                    <svg class="w-4 h-4 fill-current text-zinc-300 group-hover:text-white group-hover:scale-110 transition-transform flex-shrink-0" viewBox="0 0 24 24">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                    </svg>
+                    <span>fatandzaki013-web</span>
+                  </a>
+
+                  <!-- Instagram Button with Official SVG -->
+                  <a 
+                    href="https://instagram.com/fadzyadh_" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    class="px-2 sm:px-3 py-2.5 rounded-xl bg-zinc-950/80 border border-white/10 hover:border-pink-500/50 text-[11px] sm:text-xs font-mono text-zinc-300 hover:text-white transition-all shadow-sm flex items-center justify-center gap-1.5 sm:gap-2 group text-center" 
+                    title="Instagram: @fadzyadh_"
+                  >
+                    <svg class="w-4 h-4 fill-current text-pink-400 group-hover:scale-110 transition-transform flex-shrink-0" viewBox="0 0 24 24">
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                    <span>fadzyadh_</span>
+                  </a>
+
+                  <!-- TikTok Button with Official SVG -->
+                  <a 
+                    href="https://www.tiktok.com/@_fadzx" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    class="px-2 sm:px-3 py-2.5 rounded-xl bg-zinc-950/80 border border-white/10 hover:border-cyan-400/50 text-[11px] sm:text-xs font-mono text-zinc-300 hover:text-white transition-all shadow-sm flex items-center justify-center gap-1.5 sm:gap-2 group text-center" 
+                    title="TikTok: @_fadzx"
+                  >
+                    <svg class="w-4 h-4 fill-cyan-400 group-hover:scale-110 transition-transform flex-shrink-0" viewBox="0 0 24 24">
+                      <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                    </svg>
+                    <span>_fadzx</span>
+                  </a>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="lg:col-span-7">
+            <div class="p-6 sm:p-8 rounded-2xl bg-zinc-950/85 border border-white/10 shadow-xl backdrop-blur-md">
+              <h3 class="text-xl sm:text-2xl font-bold text-white mb-2">Send a Message</h3>
+              <p class="text-xs text-zinc-400 mb-6">Pesan langsung divalidasi dengan aman di sisi klien. Pilih pengiriman via Email atau WhatsApp.</p>
+              
+              <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-4">
+                <div>
+                  <label for="sender-name" class="block text-xs font-mono text-zinc-400 mb-1.5 uppercase">Nama Lengkap</label>
+                  <input 
+                    type="text" 
+                    id="sender-name" 
+                    name="name" 
+                    placeholder="Masukkan nama Anda..." 
+                    required 
+                    class="w-full px-4 py-3 rounded-xl bg-zinc-900/90 border border-white/10 text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-burnt-light focus:ring-1 focus:ring-burnt-light transition"
+                  />
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="sender-email" class="block text-xs font-mono text-zinc-400 mb-1.5 uppercase">Email</label>
+                    <input 
+                      type="email" 
+                      id="sender-email" 
+                      name="email" 
+                      placeholder="nama@email.com" 
+                      required 
+                      class="w-full px-4 py-3 rounded-xl bg-zinc-900/90 border border-white/10 text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-burnt-light focus:ring-1 focus:ring-burnt-light transition"
+                    />
+                  </div>
+                  <div>
+                    <label for="sender-subject" class="block text-xs font-mono text-zinc-400 mb-1.5 uppercase">Kategori Kebutuhan</label>
+                    <select 
+                      id="sender-subject" 
+                      name="subject" 
+                      class="w-full px-3 sm:px-4 py-3 rounded-xl bg-zinc-900/90 border border-white/10 text-xs sm:text-sm text-white focus:outline-none focus:border-burnt-light focus:ring-1 focus:ring-burnt-light transition cursor-pointer"
+                    >
+                      <option value="Pembuatan Website &amp; Koding">Pembuatan Website</option>
+                      <option value="Jaringan Komputer &amp; TKJ">Jaringan Komputer &amp; TKJ</option>
+                      <option value="Belajar Bareng &amp; Komunitas">Belajar Bareng &amp; Komunitas</option>
+                      <option value="Lainnya">Lainnya / Diskusi</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label for="sender-message" class="block text-xs font-mono text-zinc-400 mb-1.5 uppercase">Pesan atau Rincian Projek</label>
+                  <textarea 
+                    id="sender-message" 
+                    name="message" 
+                    rows="4" 
+                    placeholder="Tuliskan gambaran proyek, estimasi waktu, atau hal yang ingin Anda tanyakan..." 
+                    required 
+                    class="w-full px-4 py-3 rounded-xl bg-zinc-900/90 border border-white/10 text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-burnt-light focus:ring-1 focus:ring-burnt-light transition resize-none"
+                  ></textarea>
+                </div>
+
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2 w-full">
+                  <button 
+                    type="submit" 
+                    class="w-full sm:w-auto flex-1 py-3.5 px-6 rounded-full bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm shadow-xl shadow-blue-500/25 hover:shadow-blue-500/40 transition-all flex items-center justify-center gap-2"
+                  >
+                    <i data-lucide="send" class="w-4 h-4"></i>
+                    <span>Kirim via Email Client</span>
+                  </button>
+                  <button 
+                    type="button" 
+                    onclick="sendViaWhatsApp()"
+                    class="w-full sm:w-auto py-3.5 px-6 rounded-full bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-white/10 font-semibold text-sm transition flex items-center justify-center gap-2"
+                  >
+                    <i data-lucide="message-square" class="w-4 h-4 text-emerald-400"></i>
+                    <span>Kirim via WhatsApp</span>
+                  </button>
+                </div>
+
+                <div id="form-feedback" class="hidden p-3 rounded-xl text-xs font-mono"></div>
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= 6. MODERN MINIMALIST FOOTER (PERSIS GAMBAR REFERENSI USER: FATAN DZAKI) ================= -->
+  <footer class="relative bg-zinc-950 border-t border-white/10 pt-16 pb-10 px-6 sm:px-8 text-zinc-400 overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Top 3-Column Grid: Rapi 2-Kolom di HP, 12-Kolom di Desktop (Desktop 100% Tidak Berubah) -->
+      <div class="grid grid-cols-2 md:grid-cols-12 gap-8 md:gap-8 mb-10 sm:mb-12">
+        
+        <!-- Column 1: Brand & Bio (Full-width di HP, Span 6 di Desktop) -->
+        <div class="col-span-2 md:col-span-6 space-y-3 sm:space-y-4">
+          <div class="flex items-center gap-2.5">
+            <span class="text-sky-400 font-mono text-xl sm:text-2xl font-bold">&gt;_</span>
+            <span class="text-white font-bold text-xl sm:text-2xl tracking-tight font-mono">fatan dzaki</span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed max-w-md">
+            Membangun pengalaman web modern dengan presisi kode, tipografi tajam, dan eksplorasi teknologi interaktif. Siswa SMK TKJ &amp; aspiring Full-Stack Web Developer.
+          </p>
+        </div>
+
+        <!-- Column 2: Navigasi (Sebelah Kiri di HP, Span 3 di Desktop) -->
+        <div class="col-span-1 md:col-span-3 space-y-3 sm:space-y-4">
+          <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-sky-400">
+            NAVIGASI
+          </h4>
+          <ul class="space-y-2 sm:space-y-2.5 text-sm">
+            <li>
+              <a href="#home" class="text-zinc-400 hover:text-white transition-colors duration-200 inline-block">
+                Beranda
+              </a>
+            </li>
+            <li>
+              <a href="#about" class="text-zinc-400 hover:text-white transition-colors duration-200 inline-block">
+                Tentang Saya
+              </a>
+            </li>
+            <li>
+              <a href="#projects" class="text-zinc-400 hover:text-white transition-colors duration-200 inline-block">
+                Portofolio
+              </a>
+            </li>
+            <li>
+              <a href="#contact" class="text-zinc-400 hover:text-white transition-colors duration-200 inline-block">
+                Kontak
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Terhubung (Sebelah Kanan di HP, Span 3 di Desktop) -->
+        <div class="col-span-1 md:col-span-3 space-y-3 sm:space-y-4">
+          <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-orange-400">
+            TERHUBUNG
+          </h4>
+          <div class="flex items-center gap-3">
+            
+            <!-- GitHub Button & Official Logo -->
+            <a 
+              href="https://github.com/fatandzaki013-web" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="w-11 h-11 rounded-xl bg-zinc-900/90 hover:bg-zinc-800 border border-white/10 hover:border-sky-400/50 flex items-center justify-center text-zinc-300 hover:text-white transition-all shadow-sm group"
+              title="GitHub: fatandzaki013-web"
+              aria-label="GitHub Profile"
+            >
+              <svg class="w-5 h-5 fill-current text-zinc-300 group-hover:text-white group-hover:scale-110 transition-transform" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+            </a>
+
+            <!-- Instagram Button & Official Logo -->
+            <a 
+              href="https://instagram.com/fadzyadh_" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="w-11 h-11 rounded-xl bg-zinc-900/90 hover:bg-zinc-800 border border-white/10 hover:border-pink-500/50 flex items-center justify-center text-zinc-300 hover:text-white transition-all shadow-sm group"
+              title="Instagram: @fadzyadh_"
+              aria-label="Instagram Profile"
+            >
+              <svg class="w-5 h-5 fill-current text-zinc-300 group-hover:text-pink-400 group-hover:scale-110 transition-transform" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+
+            <!-- TikTok Button & Official Logo -->
+            <a 
+              href="https://www.tiktok.com/@_fadzx" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="w-11 h-11 rounded-xl bg-zinc-900/90 hover:bg-zinc-800 border border-white/10 hover:border-cyan-400/50 flex items-center justify-center text-zinc-300 hover:text-white transition-all shadow-sm group"
+              title="TikTok: @_fadzx"
+              aria-label="TikTok Profile"
+            >
+              <svg class="w-5 h-5 fill-current text-zinc-300 group-hover:text-cyan-400 group-hover:scale-110 transition-all" viewBox="0 0 24 24">
+                <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Divider Line & Watermark Section -->
+      <div class="border-t border-white/10 pt-8 mt-6">
+        
+        <!-- Metadata Row (Sleek, Refined & Professional) -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-zinc-400 mb-8 sm:mb-10">
+          
+          <!-- Left: Copyright & Live Available Badge -->
+          <div class="flex items-center gap-3">
+            <span class="font-semibold text-zinc-300 tracking-wider">
+              &copy; 2026 FATAN DZAKI
+            </span>
+            <span class="text-zinc-600 hidden sm:inline">&bull;</span>
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[11px] text-emerald-400">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>Available for Web Projects</span>
+            </span>
+          </div>
+
+          <!-- Right: Privacy, Terms & Back to Top Button -->
+          <div class="flex items-center gap-4 sm:gap-6 text-zinc-400">
+            <a href="#privacy" onclick="alert('Portofolio Fatan Dzaki — Dibuat untuk tujuan representasi karya &amp; edukasi.'); return false;" class="hover:text-white transition-colors duration-200">
+              Privacy
+            </a>
+            <span class="text-zinc-700">&bull;</span>
+            <a href="#terms" onclick="alert('Portofolio Fatan Dzaki — Seluruh hak cipta karya &amp; proyek dilindungi.'); return false;" class="hover:text-white transition-colors duration-200">
+              Terms
+            </a>
+            <button 
+              onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
+              class="group/up inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900/90 hover:bg-zinc-800 border border-white/10 hover:border-sky-400/40 text-zinc-300 hover:text-white transition-all text-xs font-mono shadow-sm ml-1 cursor-pointer active:scale-95"
+              title="Kembali ke bagian atas"
+            >
+              <span>Atas</span>
+              <i data-lucide="arrow-up" class="w-3.5 h-3.5 text-sky-400 group-hover/up:-translate-y-0.5 transition-transform"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Giant Outlined Typographic Watermark 'FATAN DZAKI' with Refined Atmospheric Backdrop -->
+        <div class="relative py-10 sm:py-16 md:py-20 select-none overflow-hidden flex items-center justify-center rounded-3xl border border-white/[0.06] bg-zinc-950/60 footer-blueprint-grid">
+          
+          <!-- Subtle Inner Ambient Glow Behind Text -->
+          <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-blue-600/10 via-orange-600/5 to-transparent pointer-events-none"></div>
+
+          <!-- Giant Outlined Typographic Watermark 'FATAN DZAKI' (SAMA SEKALI TIDAK DIUBAH) -->
+          <h2 class="footer-watermark-text font-serif text-center font-extrabold tracking-tight text-[11vw] sm:text-[12.5vw] leading-none select-none uppercase whitespace-nowrap">
+            FATAN DZAKI
+          </h2>
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================= MODALS & LIGHTBOX INTERAKTIF ================= -->
+
+  <!-- 1. LIGHTBOX MODAL: Full-Resolution Project Screenshots -->
+  <div id="modal-lightbox" onclick="if(event.target === this) closeLightbox()" class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="glass-surface rounded-2xl w-full max-w-5xl overflow-hidden border border-burnt-light/40 shadow-2xl bg-zinc-950 flex flex-col max-h-[92vh]">
+      <div class="p-4 sm:p-5 border-b border-white/10 flex items-center justify-between">
+        <div>
+          <h4 id="lightbox-title" class="text-lg sm:text-xl font-bold text-white">Project Title</h4>
+          <p id="lightbox-subtitle" class="text-xs text-zinc-400 font-mono">Project Subtitle</p>
+        </div>
+        <button onclick="closeLightbox()" class="p-2 rounded-xl text-zinc-400 hover:text-white hover:bg-white/5 transition" aria-label="Tutup preview">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="p-4 overflow-y-auto flex items-center justify-center bg-black/60">
+        <img id="lightbox-img" src="" alt="Project Preview" class="max-w-full max-h-[72vh] rounded-lg object-contain shadow-2xl border border-white/10" />
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. MODAL INTERAKTIF: Leaflet.js Courier Tracking (Fadza Fashion) -->
+  <div id="modal-courier" class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="glass-surface rounded-2xl w-full max-w-3xl overflow-hidden border border-burnt-light/40 shadow-2xl bg-zinc-950">
+      <div class="p-4 sm:p-5 border-b border-white/10 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-burnt-light/10 text-burnt-light flex items-center justify-center">
+            <i data-lucide="map-pin" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <h4 class="font-serif text-lg font-bold text-white">Simulasi Pelacakan Kurir Leaflet.js</h4>
+            <p class="text-xs text-zinc-400">Fadza Fashion — Real-Time Route &amp; Hub Tracking</p>
+          </div>
+        </div>
+        <button onclick="closeCourierMapModal()" class="p-2 rounded-xl text-zinc-400 hover:text-white hover:bg-white/5 transition" aria-label="Close modal">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="p-5">
+        <div id="courier-map" class="w-full h-72 sm:h-80 rounded-xl overflow-hidden border border-white/10"></div>
+        <div class="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+          <div class="p-3 rounded-lg bg-zinc-900 border border-white/5">
+            <span class="text-zinc-400 block font-mono">Nomor Resi:</span>
+            <span class="font-mono text-burnt-light font-bold">FDZ-JKT-882910</span>
+          </div>
+          <div class="p-3 rounded-lg bg-zinc-900 border border-white/5">
+            <span class="text-zinc-400 block font-mono">Status Pengiriman:</span>
+            <span class="text-emerald-400 font-semibold flex items-center gap-1.5 mt-0.5">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Dalam Perjalanan (Kurir Motor)
+            </span>
+          </div>
+          <div class="p-3 rounded-lg bg-zinc-900 border border-white/5">
+            <span class="text-zinc-400 block font-mono">Estimasi Tiba:</span>
+            <span class="text-zinc-200 font-semibold mt-0.5">Hari ini, 15:45 WIB</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. MODAL INTERAKTIF: Security Audit Notes -->
+  <div id="modal-security" class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="glass-surface rounded-2xl w-full max-w-2xl overflow-hidden border border-burnt-light/40 shadow-2xl bg-zinc-950">
+      <div class="p-4 sm:p-5 border-b border-white/10 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-burnt-light/10 text-burnt-light flex items-center justify-center">
+            <i data-lucide="terminal" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <h4 class="font-serif text-lg font-bold text-white">Security Audit &amp; Lab Notes</h4>
+            <p class="text-xs text-zinc-400">Vulnerability Remediation Standard (OWASP &amp; Defensive Rules)</p>
+          </div>
+        </div>
+        <button onclick="closeSecurityAuditModal()" class="p-2 rounded-xl text-zinc-400 hover:text-white hover:bg-white/5 transition" aria-label="Close modal">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="p-6 max-h-[70vh] overflow-y-auto space-y-4 text-xs font-mono">
+        <div class="p-4 rounded-xl bg-zinc-900 border border-white/10">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-burnt-light font-bold">[VULN-01] Path Traversal Defense</span>
+            <span class="text-emerald-400 font-semibold">PASSED / MITIGATED</span>
+          </div>
+          <p class="text-zinc-300 leading-relaxed font-sans text-xs">
+            <strong>Konteks:</strong> Pencegahan manipulasi traversal direktori parameter file (`../../etc/passwd`).<br>
+            <strong>Remediasi:</strong> Normalisasi path ketat via `path.resolve()`, validasi allowlist direktori aman, dan penolakan traversal token sebelum akses storage.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-zinc-900 border border-white/10">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-burnt-light font-bold">[VULN-02] Broken Access Control</span>
+            <span class="text-emerald-400 font-semibold">PASSED / MITIGATED</span>
+          </div>
+          <p class="text-zinc-300 leading-relaxed font-sans text-xs">
+            <strong>Konteks:</strong> Perlindungan endpoint admin agar tidak dapat diakses akun publik tanpa otorisasi token session terverifikasi.<br>
+            <strong>Remediasi:</strong> Verifikasi role-based access control (RBAC) di middleware sebelum routing dieksekusi dan isolasi session token.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-zinc-900 border border-white/10">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-burnt-light font-bold">[NET-03] Infrastructure Hardening (TKJ Lab)</span>
+            <span class="text-emerald-400 font-semibold">ACTIVE / HARDENED</span>
+          </div>
+          <p class="text-zinc-300 leading-relaxed font-sans text-xs">
+            <strong>Konteks:</strong> Konfigurasi router MikroTik &amp; pembagian VLAN di lab jaringan.<br>
+            <strong>Remediasi:</strong> Penonaktifan layanan rentan (WPS, UPnP, Telnet), isolasi segmen server dari host tamu, dan implementasi drop firewall rules pada paket tak dikenal.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- 4. MODAL KHUSUS: Full-Resolution Certificate View (Seminar MNC Univ) -->
+  <div id="modal-cert" class="fixed inset-0 z-50 hidden bg-black/95 backdrop-blur-md flex items-center justify-center p-3 sm:p-5" onclick="if(event.target === this) closeCertModal()">
+    <div class="glass-surface rounded-2xl w-full max-w-4xl overflow-hidden border border-blue-500/30 shadow-2xl bg-zinc-950 flex flex-col max-h-[94vh] animate-in fade-in duration-200">
+      <div class="p-4 sm:p-5 border-b border-white/10 flex items-center justify-between bg-zinc-900/70">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-blue-500/10 text-blue-400 border border-blue-500/20 flex items-center justify-center">
+            <i data-lucide="award" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-base sm:text-lg text-white">Sertifikat Partisipasi Seminar IT</h4>
+            <p class="text-xs text-zinc-400 font-mono">ANON CYBER TEAM &times; MNC University &bull; Fatan dzaki fayyadh</p>
+          </div>
+        </div>
+        <button onclick="closeCertModal()" class="p-2 rounded-xl text-zinc-400 hover:text-white hover:bg-white/10 transition" aria-label="Tutup sertifikat">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="p-3 sm:p-4 overflow-y-auto flex items-center justify-center bg-black/80">
+        <img 
+          src="assets/certificates/sertifikat-seminar-mnc.jpg" 
+          alt="Sertifikat Human Error vs Cyber Threat — Fatan dzaki fayyadh" 
+          class="max-w-full max-h-[72vh] rounded-xl object-contain shadow-2xl border border-white/10" 
+        />
+      </div>
+
+      <div class="p-3.5 sm:p-4 border-t border-white/10 bg-zinc-900/70 flex flex-wrap items-center justify-between gap-3 text-xs font-mono">
+        <div class="flex items-center gap-2 text-zinc-300">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>Status: <strong class="text-emerald-400">Terverifikasi Resmi</strong></span>
+          <span class="text-zinc-500 hidden sm:inline">&bull;</span>
+          <span class="text-zinc-400 hidden sm:inline">ID: 893c7cae-9f74-4325-b1bc-3cde219f571f</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <a 
+            href="assets/certificates/sertifikat-seminar-mnc.jpg" 
+            target="_blank" 
+            class="px-3.5 py-1.5 rounded-lg bg-blue-500/10 hover:bg-blue-500/20 text-blue-400 border border-blue-500/25 transition flex items-center gap-1.5"
+          >
+            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            <span>Buka Gambar Asli</span>
+          </a>
+          <button 
+            onclick="closeCertModal()" 
+            class="px-3.5 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-zinc-300 hover:text-white border border-white/10 transition"
+          >
+            Tutup
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= JAVASCRIPT ================= -->
+  <script>
+    // Inisialisasi Lucide Icons
+    lucide.createIcons();
+
+    // ================= WEB AUDIO API SOUND ENGINE (AUDIO TOGGLE) =================
+    let audioCtx = null;
+    let isSoundEnabled = false;
+
+    function initAudio() {
+      if (!audioCtx) {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (AudioContext) {
+          audioCtx = new AudioContext();
+        }
+      }
+    }
+
+    function playUiSound(type = 'click') {
+      if (!isSoundEnabled) return;
+      initAudio();
+      if (!audioCtx) return;
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+
+      try {
+        const now = audioCtx.currentTime;
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+
+        if (type === 'enable') {
+          // Harmonic uplifting chime
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(587.33, now); // D5
+          osc.frequency.exponentialRampToValueAtTime(880, now + 0.15); // A5
+          gain.gain.setValueAtTime(0.08, now);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + 0.35);
+          osc.start(now);
+          osc.stop(now + 0.35);
+        } else if (type === 'disable') {
+          // Soft descending tone
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(659.25, now);
+          osc.frequency.exponentialRampToValueAtTime(440, now + 0.12);
+          gain.gain.setValueAtTime(0.06, now);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + 0.25);
+          osc.start(now);
+          osc.stop(now + 0.25);
+        } else if (type === 'click') {
+          // Clean subtle tick
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(800, now);
+          gain.gain.setValueAtTime(0.025, now);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + 0.05);
+          osc.start(now);
+          osc.stop(now + 0.05);
+        }
+      } catch (err) {
+        console.warn('Audio play error:', err);
+      }
+    }
+
+    function togglePortfolioSound() {
+      initAudio();
+      isSoundEnabled = !isSoundEnabled;
+      const btn = document.getElementById('sound-toggle-btn');
+      const icon = document.getElementById('sound-icon');
+
+      if (isSoundEnabled) {
+        if (btn) {
+          btn.classList.add('bg-burnt-light/25', 'border-burnt-light/50', 'text-burnt-light');
+          btn.classList.remove('bg-white/5', 'text-zinc-300');
+        }
+        if (icon) {
+          icon.setAttribute('data-lucide', 'volume-2');
+        }
+        playUiSound('enable');
+      } else {
+        playUiSound('disable');
+        if (btn) {
+          btn.classList.remove('bg-burnt-light/25', 'border-burnt-light/50', 'text-burnt-light');
+          btn.classList.add('bg-white/5', 'text-zinc-300');
+        }
+        if (icon) {
+          icon.setAttribute('data-lucide', 'volume-x');
+        }
+      }
+
+      if (window.lucide) lucide.createIcons();
+    }
+
+    // ================= CAPSULE NAVBAR SCROLL SPY (RESPONSIF, PRESISI & BEBAS GLITCH) =================
+    (function initScrollSpy() {
+      const activeClass = 'nav-capsule-item active px-3 sm:px-5 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-sm font-semibold text-white bg-gradient-to-r from-blue-600 via-sky-500 to-blue-500 shadow-[0_0_20px_rgba(37,99,235,0.45)] border border-sky-400/50 transition-all duration-300 flex items-center justify-center';
+      const inactiveClass = 'nav-capsule-item px-3 sm:px-5 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-sm font-medium text-zinc-400 hover:text-white hover:bg-white/5 border border-transparent transition-all duration-300 flex items-center justify-center';
+
+      const navMappings = [
+        { ids: ['home'], navId: 'nav-home' },
+        { ids: ['about'], navId: 'nav-about' },
+        { ids: ['projects', 'community', 'music'], navId: 'nav-portfolio' },
+        { ids: ['contact'], navId: 'nav-contact' }
+      ];
+
+      function setActiveNav(targetNavId) {
+        navMappings.forEach(({ navId }) => {
+          const el = document.getElementById(navId);
+          if (!el) return;
+          if (navId === targetNavId) {
+            el.className = activeClass;
+          } else {
+            el.className = inactiveClass;
+          }
+        });
+      }
+
+      let isTicking = false;
+      function updateActiveNav() {
+        const scrollY = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const fullHeight = document.documentElement.scrollHeight;
+
+        // 1. Bottom of page threshold: Pastikan Kontak selalu aktif saat scroll mencapai dasar halaman
+        if ((scrollY + windowHeight) >= (fullHeight - 140)) {
+          setActiveNav('nav-contact');
+          return;
+        }
+
+        // 2. Top of page threshold: Pastikan Home selalu aktif di paling atas
+        if (scrollY < 180) {
+          setActiveNav('nav-home');
+          return;
+        }
+
+        // 3. Viewport intersection check dengan trigger point 38% tinggi layar
+        const triggerPoint = windowHeight * 0.38;
+        let matchedNavId = 'nav-home';
+
+        for (const mapping of navMappings) {
+          for (const secId of mapping.ids) {
+            const sec = document.getElementById(secId);
+            if (sec) {
+              const rect = sec.getBoundingClientRect();
+              if (rect.top <= triggerPoint && rect.bottom > triggerPoint) {
+                matchedNavId = mapping.navId;
+                break;
+              }
+            }
+          }
+        }
+
+        setActiveNav(matchedNavId);
+      }
+
+      window.addEventListener('scroll', () => {
+        if (!isTicking) {
+          window.requestAnimationFrame(() => {
+            updateActiveNav();
+            isTicking = false;
+          });
+          isTicking = true;
+        }
+      }, { passive: true });
+
+      // Inisialisasi awal saat halaman dibuka
+      updateActiveNav();
+
+      // Klik nav langsung memicu suara dan transisi aktif instan
+      document.querySelectorAll('.nav-capsule-item').forEach(item => {
+        item.addEventListener('click', (e) => {
+          if (typeof playUiSound === 'function') {
+            playUiSound('click');
+          }
+          setActiveNav(item.id);
+        });
+      });
+    })();
+
+    // Lightbox Modal Handler
+    function openLightbox(src, title, subtitle) {
+      const modal = document.getElementById('modal-lightbox');
+      const img = document.getElementById('lightbox-img');
+      const titleEl = document.getElementById('lightbox-title');
+      const subEl = document.getElementById('lightbox-subtitle');
+
+      if (img) img.src = src;
+      if (titleEl) titleEl.textContent = title;
+      if (subEl) subEl.textContent = subtitle;
+      if (modal) {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    
+    // Modal Sertifikat Partisipasi Seminar
+    function openCertModal() {
+      const modal = document.getElementById('modal-cert');
+      if (modal) {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      } else {
+        openLightbox('assets/certificates/sertifikat-seminar-mnc.jpg', 'Sertifikat Partisipasi', 'MNC University &times; Anon Cyber Team');
+      }
+    }
+
+    function closeCertModal() {
+      const modal = document.getElementById('modal-cert');
+      if (modal) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('modal-lightbox');
+      if (modal) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+    }
+
+    // Modal Handler: Leaflet.js Courier Tracking
+    let mapInstance = null;
+    let courierMarker = null;
+    let animationInterval = null;
+
+    function openCourierMapModal() {
+      const modal = document.getElementById('modal-courier');
+      modal.classList.remove('hidden');
+      
+      setTimeout(() => {
+        if (!mapInstance) {
+          const startLat = -6.9175;
+          const startLng = 107.6191;
+
+          mapInstance = L.map('courier-map').setView([startLat, startLng], 14);
+
+          L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; OpenStreetMap, &copy; CartoDB',
+            maxZoom: 19
+          }).addTo(mapInstance);
+
+          L.marker([startLat, startLng]).addTo(mapInstance)
+            .bindPopup('<b>Warehouse Fadza Fashion</b><br>Pusat Distribusi').openPopup();
+
+          const destLat = -6.9080;
+          const destLng = 107.6250;
+          L.marker([destLat, destLng]).addTo(mapInstance)
+            .bindPopup('<b>Alamat Tujuan Pembeli</b><br>Paket Segera Diterima');
+
+          const route = [
+            [startLat, startLng],
+            [-6.9140, 107.6210],
+            [-6.9110, 107.6235],
+            [destLat, destLng]
+          ];
+          L.polyline(route, { color: '#38bdf8', weight: 4, dashArray: '6, 8' }).addTo(mapInstance);
+
+          let step = 0;
+          courierMarker = L.circleMarker([startLat, startLng], {
+            radius: 8,
+            fillColor: '#2563eb',
+            color: '#ffffff',
+            weight: 2,
+            opacity: 1,
+            fillOpacity: 1
+          }).addTo(mapInstance);
+
+          animationInterval = setInterval(() => {
+            step = (step + 1) % route.length;
+            courierMarker.setLatLng(route[step]);
+          }, 1800);
+        } else {
+          mapInstance.invalidateSize();
+        }
+      }, 150);
+    }
+
+    function closeCourierMapModal() {
+      document.getElementById('modal-courier').classList.add('hidden');
+    }
+
+    // Modal Handler: Security Notes
+    function openSecurityAuditModal() {
+      document.getElementById('modal-security').classList.remove('hidden');
+    }
+    function closeSecurityAuditModal() {
+      document.getElementById('modal-security').classList.add('hidden');
+    }
+
+    // ================= PORTFOLIO / WORKS TAB SWITCHER =================
+    function switchPortfolioTab(tabKey) {
+      const views = ['projects', 'credentials', 'techstack'];
+      
+      views.forEach(key => {
+        const viewEl = document.getElementById('portfolio-view-' + key);
+        const btnEl = document.getElementById('tab-btn-' + key);
+        
+        if (key === tabKey) {
+          if (viewEl) viewEl.classList.remove('hidden');
+          if (btnEl) {
+            btnEl.className = 'portfolio-tab-btn active px-3 sm:px-5 py-1.5 sm:py-2.5 rounded-full text-[11px] sm:text-sm font-semibold bg-gradient-to-r from-blue-600 via-sky-600 to-blue-500 text-white shadow-lg shadow-blue-500/35 border border-sky-400/50 transition-all flex items-center gap-1 sm:gap-2 cursor-pointer whitespace-nowrap';
+          }
+        } else {
+          if (viewEl) viewEl.classList.add('hidden');
+          if (btnEl) {
+            btnEl.className = 'portfolio-tab-btn px-3 sm:px-5 py-1.5 sm:py-2.5 rounded-full text-[11px] sm:text-sm font-medium text-zinc-400 hover:text-white hover:bg-white/5 transition-all flex items-center gap-1 sm:gap-2 cursor-pointer whitespace-nowrap';
+          }
+        }
+      });
+
+      if (typeof playUiSound === 'function') {
+        playUiSound('click');
+      }
+
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    }
+
+    // ================= COMMUNITY POLAROID LIGHTBOX =================
+    const communityMoments = [
+      {
+        src: 'assets/community/community-coding-circle.jpg',
+        title: 'Meeting',
+        tag: 'with the crew'
+      },
+      {
+        src: 'assets/community/community-seminar-stage.jpg',
+        title: 'Human Error vs Threat',
+        tag: 'MNC Univ'
+      },
+      {
+        src: 'assets/community/community-workspace.jpg',
+        title: 'Workspace',
+        tag: 'daily setup'
+      },
+      {
+        src: 'assets/community/community-seminar-auditorium.jpg',
+        title: 'National Gathering',
+        tag: 'Auditorium'
+      }
+    ];
+
+    let currentLightboxIdx = 0;
+
+    function openCommunityLightbox(idx) {
+      currentLightboxIdx = idx;
+      updateCommunityLightbox();
+      const modal = document.getElementById('community-lightbox');
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      }
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function closeCommunityLightbox() {
+      const modal = document.getElementById('community-lightbox');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = '';
+      }
+    }
+
+    function navigateLightbox(delta) {
+      currentLightboxIdx = (currentLightboxIdx + delta + communityMoments.length) % communityMoments.length;
+      updateCommunityLightbox();
+    }
+
+    function updateCommunityLightbox() {
+      const moment = communityMoments[currentLightboxIdx];
+      if (!moment) return;
+      const imgEl = document.getElementById('community-lightbox-img');
+      const titleEl = document.getElementById('community-lightbox-title');
+      const tagEl = document.getElementById('lightbox-tag');
+      const counterEl = document.getElementById('lightbox-counter');
+
+      if (imgEl) {
+        imgEl.style.opacity = '0.4';
+        setTimeout(() => {
+          imgEl.src = moment.src;
+          imgEl.style.opacity = '1';
+        }, 100);
+      }
+      if (titleEl) titleEl.textContent = moment.title;
+      if (tagEl) tagEl.textContent = moment.tag;
+      if (counterEl) counterEl.textContent = (currentLightboxIdx + 1) + ' / ' + communityMoments.length + ' Moments';
+    }
+
+    // Keyboard ESC & Arrows listener
+    window.addEventListener('keydown', (e) => {
+      const lightboxModal = document.getElementById('community-lightbox');
+      if (lightboxModal && !lightboxModal.classList.contains('hidden')) {
+        if (e.key === 'Escape') closeCommunityLightbox();
+        if (e.key === 'ArrowLeft') navigateLightbox(-1);
+        if (e.key === 'ArrowRight') navigateLightbox(1);
+        return;
+      }
+
+      if (e.key === 'Escape') {
+        closeLightbox();
+        closeCertModal();
+        closeCourierMapModal();
+        closeSecurityAuditModal();
+        closeCommunityLightbox();
+      }
+    });
+
+    // Sanitasi input (XSS Safe)
+    function sanitize(str) {
+      const div = document.createElement('div');
+      div.textContent = str;
+      return div.innerHTML;
+    }
+
+    // Form Handling & Direct Messaging
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const name = sanitize(document.getElementById('sender-name').value.trim());
+      const email = sanitize(document.getElementById('sender-email').value.trim());
+      const subject = sanitize(document.getElementById('sender-subject').value);
+      const message = sanitize(document.getElementById('sender-message').value.trim());
+
+      const feedback = document.getElementById('form-feedback');
+
+      if (!name || !email || !message) {
+        feedback.className = 'p-3 rounded-xl text-xs font-mono bg-rose-950/80 border border-rose-500/30 text-rose-300 block';
+        feedback.textContent = 'Mohon lengkapi semua kolom formulir.';
+        return;
+      }
+
+      const mailtoUrl = `mailto:fatandzaki013@gmail.com?subject=${encodeURIComponent('[' + subject + '] Dari: ' + name)}&body=${encodeURIComponent('Nama: ' + name + '\nEmail: ' + email + '\n\nPesan:\n' + message)}`;
+      window.location.href = mailtoUrl;
+
+      feedback.className = 'p-3 rounded-xl text-xs font-mono bg-emerald-950/80 border border-emerald-500/30 text-emerald-300 block';
+      feedback.textContent = 'Membuka aplikasi email Anda... Jika tidak terbuka otomatis, Anda dapat menggunakan tombol WhatsApp di samping.';
+    }
+
+    function sendViaWhatsApp() {
+      const name = document.getElementById('sender-name').value.trim() || 'Klien';
+      const email = document.getElementById('sender-email').value.trim() || 'tidak dicantumkan';
+      const subject = document.getElementById('sender-subject').value;
+      const message = document.getElementById('sender-message').value.trim() || 'Halo Fatan, saya tertarik berdiskusi mengenai proyek web/IT.';
+
+      const text = `Halo Fatan! Saya ${name} (${email}).%0A%0A*Kategori:* ${subject}%0A*Pesan:* ${message}`;
+      const waUrl = `https://wa.me/6285888159765?text=${text}`;
+      window.open(waUrl, '_blank', 'noopener,noreferrer');
+    }
+  </script>
+</body>
+</html>
