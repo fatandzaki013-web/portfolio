@@ -1098,10 +1098,10 @@
       </div>
 
       <!-- Polaroid Snapshot Gallery (Alternating Order & Click-to-Open Modal) -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 items-center justify-items-center max-w-6xl mx-auto pt-6 pb-6">
+      <div class="flex flex-wrap items-center justify-center gap-8 lg:gap-7 max-w-6xl mx-auto pt-6 pb-6">
         
         <!-- POLAROID 1: MEETING (KLIK UNTUK MEMBUKA) -->
-        <div onclick="openCommunityLightbox(0)" class="group relative bg-[#fafafa] text-zinc-900 rounded-sm p-3.5 pb-7 shadow-[0_15px_35px_rgba(0,0,0,0.65)] -rotate-2 hover:rotate-0 hover:scale-105 hover:z-30 transition-all duration-300 w-full max-w-[275px] border border-white/60 cursor-pointer select-none">
+        <div onclick="openCommunityLightbox(0)" class="group relative bg-[#fafafa] text-zinc-900 rounded-sm p-3.5 pb-7 shadow-[0_15px_35px_rgba(0,0,0,0.65)] -rotate-2 hover:rotate-0 hover:scale-105 hover:z-30 transition-all duration-300 w-full max-w-[275px] sm:w-[260px] border border-white/60 cursor-pointer select-none">
           <!-- Photo Frame -->
           <div class="aspect-square w-full overflow-hidden bg-zinc-900 rounded-[2px] mb-3 relative">
             <img src="assets/community/community-coding-circle.jpg" alt="Meeting" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
@@ -1120,7 +1120,7 @@
         </div>
 
         <!-- POLAROID 2: HUMAN ERROR VS THREAT (KLIK UNTUK MEMBUKA) -->
-        <div onclick="openCommunityLightbox(1)" class="group relative bg-[#fafafa] text-zinc-900 rounded-sm p-3.5 pb-7 shadow-[0_15px_35px_rgba(0,0,0,0.65)] rotate-2 hover:rotate-0 hover:scale-105 hover:z-30 transition-all duration-300 w-full max-w-[275px] border border-white/60 cursor-pointer select-none">
+        <div onclick="openCommunityLightbox(1)" class="group relative bg-[#fafafa] text-zinc-900 rounded-sm p-3.5 pb-7 shadow-[0_15px_35px_rgba(0,0,0,0.65)] rotate-2 hover:rotate-0 hover:scale-105 hover:z-30 transition-all duration-300 w-full max-w-[275px] sm:w-[260px] border border-white/60 cursor-pointer select-none">
           <!-- Photo Frame -->
           <div class="aspect-square w-full overflow-hidden bg-zinc-900 rounded-[2px] mb-3 relative">
             <img src="assets/community/community-seminar-stage.jpg" alt="Seminar Human Error vs Cyber Threat" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
@@ -1139,7 +1139,7 @@
         </div>
 
         <!-- POLAROID 3: WORKSPACE (DISELING POSISI KE-3 SESUAI PERMINTAAN USER) -->
-        <div onclick="openCommunityLightbox(2)" class="group relative bg-[#fafafa] text-zinc-900 rounded-sm p-3.5 pb-7 shadow-[0_15px_35px_rgba(0,0,0,0.65)] -rotate-1 hover:rotate-0 hover:scale-105 hover:z-30 transition-all duration-300 w-full max-w-[275px] border border-white/60 cursor-pointer select-none">
+        <div onclick="openCommunityLightbox(2)" class="group relative bg-[#fafafa] text-zinc-900 rounded-sm p-3.5 pb-7 shadow-[0_15px_35px_rgba(0,0,0,0.65)] -rotate-1 hover:rotate-0 hover:scale-105 hover:z-30 transition-all duration-300 w-full max-w-[275px] sm:w-[260px] border border-white/60 cursor-pointer select-none">
           <!-- Photo Frame -->
           <div class="aspect-square w-full overflow-hidden bg-zinc-900 rounded-[2px] mb-3 relative">
             <img src="assets/community/community-workspace.jpg" alt="Workspace Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
@@ -1157,8 +1157,8 @@
           </div>
         </div>
 
-        <!-- POLAROID 4: NATIONAL GATHERING (DISELING POSISI TERAKHIR) -->
-        <div onclick="openCommunityLightbox(3)" class="group relative bg-[#fafafa] text-zinc-900 rounded-sm p-3.5 pb-7 shadow-[0_15px_35px_rgba(0,0,0,0.65)] rotate-3 hover:rotate-0 hover:scale-105 hover:z-30 transition-all duration-300 w-full max-w-[275px] border border-white/60 cursor-pointer select-none">
+        <!-- POLAROID 4: NATIONAL GATHERING (DISELING POSISI KE-4) -->
+        <div onclick="openCommunityLightbox(3)" class="group relative bg-[#fafafa] text-zinc-900 rounded-sm p-3.5 pb-7 shadow-[0_15px_35px_rgba(0,0,0,0.65)] rotate-3 hover:rotate-0 hover:scale-105 hover:z-30 transition-all duration-300 w-full max-w-[275px] sm:w-[260px] border border-white/60 cursor-pointer select-none">
           <!-- Photo Frame -->
           <div class="aspect-square w-full overflow-hidden bg-zinc-900 rounded-[2px] mb-3 relative">
             <img src="assets/community/community-seminar-auditorium.jpg" alt="National Tech Gathering" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
@@ -1176,6 +1176,63 @@
           </div>
         </div>
 
+        <!-- POLAROID 5: CYBER BREAKER CREW (KLIK UNTUK MEMBUKA) -->
+        <div onclick="openCommunityLightbox(4)" class="group relative bg-[#fafafa] text-zinc-900 rounded-sm p-3.5 pb-7 shadow-[0_15px_35px_rgba(0,0,0,0.65)] -rotate-2 hover:rotate-0 hover:scale-105 hover:z-30 transition-all duration-300 w-full max-w-[275px] sm:w-[260px] border border-white/60 cursor-pointer select-none">
+          <!-- Photo Frame -->
+          <div class="aspect-[4/3] w-full overflow-hidden bg-zinc-950 rounded-[2px] mb-3 relative">
+            <img src="assets/community/community-cyber-breaker-crew.jpg" alt="Cyber Breaker Crew di Peris.ai" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <div class="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+              <span class="px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-[11px] font-mono flex items-center gap-1.5 border border-white/20">
+                <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i>
+                <span>Buka Foto</span>
+              </span>
+            </div>
+          </div>
+          <!-- Polaroid Handwritten Chin -->
+          <div class="flex items-baseline justify-between px-1">
+            <span class="font-handwriting text-xl font-bold text-zinc-900 tracking-tight leading-none">Cyber Breaker Crew</span>
+            <span class="font-handwriting text-lg text-zinc-600 font-semibold italic whitespace-nowrap ml-2">Peris.ai</span>
+          </div>
+        </div>
+
+        <!-- POLAROID 6: TECH SQUAD (KLIK UNTUK MEMBUKA) -->
+        <div onclick="openCommunityLightbox(5)" class="group relative bg-[#fafafa] text-zinc-900 rounded-sm p-3.5 pb-7 shadow-[0_15px_35px_rgba(0,0,0,0.65)] rotate-2 hover:rotate-0 hover:scale-105 hover:z-30 transition-all duration-300 w-full max-w-[275px] sm:w-[260px] border border-white/60 cursor-pointer select-none">
+          <!-- Photo Frame -->
+          <div class="aspect-[4/3] w-full overflow-hidden bg-zinc-950 rounded-[2px] mb-3 relative">
+            <img src="assets/community/community-tech-squad.jpg" alt="Dokumentasi Tim di Garuda Spark" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <div class="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+              <span class="px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-[11px] font-mono flex items-center gap-1.5 border border-white/20">
+                <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i>
+                <span>Buka Foto</span>
+              </span>
+            </div>
+          </div>
+          <!-- Polaroid Handwritten Chin -->
+          <div class="flex items-baseline justify-between px-1">
+            <span class="font-handwriting text-2xl font-bold text-zinc-900 tracking-tight leading-none">Tech Squad</span>
+            <span class="font-handwriting text-lg text-zinc-600 font-semibold italic whitespace-nowrap ml-2">Garuda Spark</span>
+          </div>
+        </div>
+
+        <!-- POLAROID 7: CYBER BREAKER TALKS (KLIK UNTUK MEMBUKA) -->
+        <div onclick="openCommunityLightbox(6)" class="group relative bg-[#fafafa] text-zinc-900 rounded-sm p-3.5 pb-7 shadow-[0_15px_35px_rgba(0,0,0,0.65)] -rotate-1 hover:rotate-0 hover:scale-105 hover:z-30 transition-all duration-300 w-full max-w-[275px] sm:w-[260px] border border-white/60 cursor-pointer select-none">
+          <!-- Photo Frame -->
+          <div class="aspect-[4/3] w-full overflow-hidden bg-zinc-950 rounded-[2px] mb-3 relative">
+            <img src="assets/community/community-cyber-breaker-talks.jpg" alt="Cyber Breaker Talks Session di Ganara Art" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <div class="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+              <span class="px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-[11px] font-mono flex items-center gap-1.5 border border-white/20">
+                <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i>
+                <span>Buka Foto</span>
+              </span>
+            </div>
+          </div>
+          <!-- Polaroid Handwritten Chin -->
+          <div class="flex items-baseline justify-between px-1">
+            <span class="font-handwriting text-xl font-bold text-zinc-900 tracking-tight leading-none">Cyber Breaker Talks</span>
+            <span class="font-handwriting text-lg text-zinc-600 font-semibold italic whitespace-nowrap ml-2">Ganara Art</span>
+          </div>
+        </div>
+
       </div>
 
     </section>
@@ -1187,11 +1244,11 @@
       <div class="absolute inset-0" onclick="closeCommunityLightbox()"></div>
 
       <!-- Modal Content Container -->
-      <div class="relative z-10 max-w-lg w-full flex flex-col items-center">
+      <div class="relative z-10 max-w-lg sm:max-w-xl w-full flex flex-col items-center">
         
         <!-- Top Action Bar (Close button & counter) -->
         <div class="w-full flex items-center justify-between mb-3 text-white">
-          <span id="lightbox-counter" class="text-xs font-mono text-zinc-400">1 / 4 Moments</span>
+          <span id="lightbox-counter" class="text-xs font-mono text-zinc-400">1 / 7 Moments</span>
           <button onclick="closeCommunityLightbox()" class="px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-xs font-mono text-white transition flex items-center gap-1.5 cursor-pointer">
             <span>Tutup</span>
             <i data-lucide="x" class="w-4 h-4"></i>
@@ -1202,8 +1259,8 @@
         <div class="relative bg-[#fafafa] text-zinc-900 rounded-sm p-4 sm:p-5 pb-8 sm:pb-9 shadow-[0_25px_60px_rgba(0,0,0,0.9)] w-full border border-white/80 animate-in fade-in zoom-in-95 duration-200">
           
           <!-- Big Image Frame -->
-          <div class="aspect-square w-full overflow-hidden bg-zinc-950 rounded-[2px] mb-4 relative">
-            <img id="community-lightbox-img" src="" alt="Community Moment" class="w-full h-full object-cover transition-all duration-300" />
+          <div class="w-full overflow-hidden bg-zinc-950 rounded-[2px] mb-4 relative flex items-center justify-center">
+            <img id="community-lightbox-img" src="" alt="Community Moment" class="w-full max-h-[65vh] object-contain transition-all duration-300" />
           </div>
 
           <!-- Handwritten Chin -->
@@ -2166,6 +2223,21 @@
         src: 'assets/community/community-seminar-auditorium.jpg',
         title: 'National Gathering',
         tag: 'Auditorium'
+      },
+      {
+        src: 'assets/community/community-cyber-breaker-crew.jpg',
+        title: 'Cyber Breaker Crew',
+        tag: 'Peris.ai'
+      },
+      {
+        src: 'assets/community/community-tech-squad.jpg',
+        title: 'Tech Squad',
+        tag: 'Garuda Spark'
+      },
+      {
+        src: 'assets/community/community-cyber-breaker-talks.jpg',
+        title: 'Cyber Breaker Talks',
+        tag: 'Ganara Art'
       }
     ];
 
