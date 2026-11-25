@@ -1676,13 +1676,13 @@
 
           <!-- Right: Privacy, Terms & Back to Top Button -->
           <div class="flex items-center gap-4 sm:gap-6 text-zinc-400">
-            <a href="#privacy" onclick="alert('Portofolio Fatan Dzaki — Dibuat untuk tujuan representasi karya &amp; edukasi.'); return false;" class="hover:text-white transition-colors duration-200">
+            <button type="button" onclick="openLegalModal('privacy')" class="hover:text-white transition-colors duration-200 cursor-pointer">
               Privacy
-            </a>
+            </button>
             <span class="text-zinc-700">&bull;</span>
-            <a href="#terms" onclick="alert('Portofolio Fatan Dzaki — Seluruh hak cipta karya &amp; proyek dilindungi.'); return false;" class="hover:text-white transition-colors duration-200">
+            <button type="button" onclick="openLegalModal('terms')" class="hover:text-white transition-colors duration-200 cursor-pointer">
               Terms
-            </a>
+            </button>
             <button 
               onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
               class="group/up inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900/90 hover:bg-zinc-800 border border-white/10 hover:border-sky-400/40 text-zinc-300 hover:text-white transition-all text-xs font-mono shadow-sm ml-1 cursor-pointer active:scale-95"
@@ -1877,6 +1877,95 @@
             Tutup
           </button>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. MODAL INTERAKTIF: Privacy Policy & Terms of Use -->
+  <div id="modal-legal" onclick="if(event.target === this) closeLegalModal()" class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="glass-surface rounded-2xl w-full max-w-xl overflow-hidden border border-white/15 shadow-2xl bg-zinc-950/95">
+      
+      <!-- Modal Header -->
+      <div class="p-4 sm:p-5 border-b border-white/10 flex items-center justify-between gap-3">
+        <div class="flex items-center gap-3">
+          <div id="legal-icon-box" class="w-9 h-9 rounded-xl bg-sky-500/15 border border-sky-500/30 text-sky-400 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="shield-check" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <h4 id="legal-modal-title" class="font-serif text-lg sm:text-xl font-bold text-white">Privacy Policy</h4>
+            <p id="legal-modal-subtitle" class="text-xs text-zinc-400 font-mono">Portofolio Resmi Fatan Dzaki Fayyadh</p>
+          </div>
+        </div>
+        <button type="button" onclick="closeLegalModal()" class="p-2 rounded-xl text-zinc-400 hover:text-white hover:bg-white/5 transition cursor-pointer" aria-label="Tutup modal">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Tab Switcher (Privacy | Terms) -->
+      <div class="px-5 pt-4 flex items-center gap-2">
+        <button type="button" id="legal-tab-privacy" onclick="switchLegalTab('privacy')" class="px-3.5 py-1.5 rounded-lg text-xs font-mono font-semibold transition cursor-pointer">
+          Privacy Policy
+        </button>
+        <button type="button" id="legal-tab-terms" onclick="switchLegalTab('terms')" class="px-3.5 py-1.5 rounded-lg text-xs font-mono font-semibold transition cursor-pointer">
+          Terms of Use
+        </button>
+      </div>
+
+      <!-- Modal Content Panels -->
+      <div class="p-5 sm:p-6 max-h-[65vh] overflow-y-auto space-y-3 text-sm text-zinc-300 leading-relaxed">
+        
+        <!-- Privacy Content -->
+        <div id="legal-content-privacy" class="space-y-3">
+          <div class="p-4 rounded-xl bg-zinc-900/90 border border-white/10">
+            <p class="text-xs font-mono uppercase tracking-wider text-sky-400 mb-1.5">01. Tujuan Website</p>
+            <p class="text-xs sm:text-sm text-zinc-300">
+              Website portofolio ini dibuat oleh <strong class="text-white">Fatan Dzaki Fayyadh</strong> (Pelajar TKJ SMKS Al-Hadiid) untuk menampilkan profil, proyek pengembangan web, sertifikasi, dan dokumentasi kegiatan belajar.
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-zinc-900/90 border border-white/10">
+            <p class="text-xs font-mono uppercase tracking-wider text-sky-400 mb-1.5">02. Pengelolaan Data Formulir</p>
+            <p class="text-xs sm:text-sm text-zinc-300">
+              Situs ini bersifat statis tanpa pelacakan iklan, cookie analitik pihak ketiga, maupun database server. Data yang Anda isi pada formulir kontak (<em>Nama</em>, <em>Email</em>, <em>Pesan</em>) hanya diproses di browser untuk langsung membuka aplikasi Email atau WhatsApp milik Anda.
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-zinc-900/90 border border-white/10">
+            <p class="text-xs font-mono uppercase tracking-wider text-sky-400 mb-1.5">03. Tautan Eksternal</p>
+            <p class="text-xs sm:text-sm text-zinc-300">
+              Tautan menuju GitHub, Instagram, TikTok, dan Spotify akan mengarahkan Anda ke layanan masing-masing sesuai kebijakan privasi platform terkait.
+            </p>
+          </div>
+        </div>
+
+        <!-- Terms Content -->
+        <div id="legal-content-terms" class="hidden space-y-3">
+          <div class="p-4 rounded-xl bg-zinc-900/90 border border-white/10">
+            <p class="text-xs font-mono uppercase tracking-wider text-orange-400 mb-1.5">01. Hak Cipta &amp; Kepemilikan Karya</p>
+            <p class="text-xs sm:text-sm text-zinc-300">
+              Seluruh desain antarmuka, kode sumber portofolio, tangkapan layar proyek (<strong class="text-white">Dapur Rasa</strong>, <strong class="text-white">Fadza Fashion</strong>, <strong class="text-white">Fadza Trip</strong>, <strong class="text-white">CyberGuard</strong>), serta foto dokumentasi adalah milik Fatan Dzaki Fayyadh dan rekan tim terkait.
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-zinc-900/90 border border-white/10">
+            <p class="text-xs font-mono uppercase tracking-wider text-orange-400 mb-1.5">02. Batasan Penggunaan</p>
+            <p class="text-xs sm:text-sm text-zinc-300">
+              Pengunjung diperbolehkan menelusuri karya untuk keperluan evaluasi PKL/magang, rekrutmen, kolaborasi, atau referensi belajar. Dilarang menduplikasi identitas pribadi atau mengklaim ulang proyek tanpa izin.
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-zinc-900/90 border border-white/10">
+            <p class="text-xs font-mono uppercase tracking-wider text-orange-400 mb-1.5">03. Hubungi Pemilik</p>
+            <p class="text-xs sm:text-sm text-zinc-300">
+              Untuk pertanyaan, kerja sama proyek web, atau izin penggunaan materi, silakan hubungi <a href="mailto:fatandzaki013@gmail.com" class="text-orange-400 hover:underline font-mono">fatandzaki013@gmail.com</a>.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-4 border-t border-white/10 bg-zinc-900/70 flex items-center justify-between text-xs font-mono">
+        <span class="text-zinc-500">&copy; 2026 Fatan Dzaki Fayyadh</span>
+        <button type="button" onclick="closeLegalModal()" class="px-4 py-1.5 rounded-lg bg-white/10 hover:bg-white/15 text-white border border-white/15 transition cursor-pointer">
+          Mengerti, Tutup
+        </button>
       </div>
     </div>
   </div>
@@ -2175,6 +2264,61 @@
       document.getElementById('modal-security').classList.add('hidden');
     }
 
+    // Modal Handler: Privacy Policy & Terms of Use
+    function openLegalModal(tab = 'privacy') {
+      switchLegalTab(tab);
+      const modal = document.getElementById('modal-legal');
+      if (modal) {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+      if (typeof playUiSound === 'function') playUiSound('click');
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function switchLegalTab(tab) {
+      const isPrivacy = tab === 'privacy';
+      const privacyPanel = document.getElementById('legal-content-privacy');
+      const termsPanel = document.getElementById('legal-content-terms');
+      const privacyBtn = document.getElementById('legal-tab-privacy');
+      const termsBtn = document.getElementById('legal-tab-terms');
+      const titleEl = document.getElementById('legal-modal-title');
+      const iconBox = document.getElementById('legal-icon-box');
+
+      if (privacyPanel) privacyPanel.classList.toggle('hidden', !isPrivacy);
+      if (termsPanel) termsPanel.classList.toggle('hidden', isPrivacy);
+      if (titleEl) titleEl.textContent = isPrivacy ? 'Privacy Policy' : 'Terms of Use';
+
+      if (iconBox) {
+        iconBox.className = isPrivacy
+          ? 'w-9 h-9 rounded-xl bg-sky-500/15 border border-sky-500/30 text-sky-400 flex items-center justify-center flex-shrink-0'
+          : 'w-9 h-9 rounded-xl bg-orange-500/15 border border-orange-500/30 text-orange-400 flex items-center justify-center flex-shrink-0';
+        iconBox.innerHTML = isPrivacy
+          ? '<i data-lucide="shield-check" class="w-4 h-4"></i>'
+          : '<i data-lucide="file-text" class="w-4 h-4"></i>';
+      }
+
+      if (privacyBtn) {
+        privacyBtn.className = isPrivacy
+          ? 'px-3.5 py-1.5 rounded-lg text-xs font-mono font-semibold bg-sky-500/15 text-sky-400 border border-sky-500/35 transition cursor-pointer'
+          : 'px-3.5 py-1.5 rounded-lg text-xs font-mono font-semibold bg-zinc-900 text-zinc-400 hover:text-white border border-white/10 transition cursor-pointer';
+      }
+      if (termsBtn) {
+        termsBtn.className = !isPrivacy
+          ? 'px-3.5 py-1.5 rounded-lg text-xs font-mono font-semibold bg-orange-500/15 text-orange-400 border border-orange-500/35 transition cursor-pointer'
+          : 'px-3.5 py-1.5 rounded-lg text-xs font-mono font-semibold bg-zinc-900 text-zinc-400 hover:text-white border border-white/10 transition cursor-pointer';
+      }
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function closeLegalModal() {
+      const modal = document.getElementById('modal-legal');
+      if (modal && !modal.classList.contains('hidden')) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+    }
+
     // ================= PORTFOLIO / WORKS TAB SWITCHER =================
     function switchPortfolioTab(tabKey) {
       const views = ['projects', 'credentials', 'techstack'];
@@ -2308,6 +2452,7 @@
         closeCourierMapModal();
         closeSecurityAuditModal();
         closeCommunityLightbox();
+        closeLegalModal();
       }
     });
 
